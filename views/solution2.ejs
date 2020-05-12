@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Flyfighter/Forcast</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mdb.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    
+    
+  </head>
+
+
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>The Fly Fighters</b> </a>
+     <!--Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="/" class="w3-bar-item w3-button">Home</a>
+      <a href="./about" class="w3-bar-item w3-button">About</a> 
+      <a href="./solution2" class="w3-bar-item w3-button">Forecast</a>
+      <a href="./prediction" class="w3-bar-item w3-button">Solution</a>
+    </div>
+  </div>
+</div>
+
+<!--buffer-->
+<div style="height: 70px; width:max-content;"></div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="width:100%">
+  <img src="./img/solutionspage.png" style="height:500;width:100%">
+  <div class="w3-display-middle w3-margin-top w3-center">
+  </div>
+</header>
+
+
+
+<!--buffer-->
+<div style="height: 54px; width:max-content;"></div>
+
+
+
+
+
+<!--content-->
+<!--select area-->
+<div style="height: 100px; width:auto;text-align: center">
+  <div class="w3-white">Please Select Your Location: </div>
+  <select id="selectionarea">
+    <option value="none" selected disabled hidden>Select from the options</option> 
+    <option value="Broome">Broome</option>
+    <option value="Bunbury">Bunbury</option>
+    <option value="Carnarvon">Carnarvon</option>
+    <option value="Donnybrook">Donnybrook</option>
+    <option value="Dwellingup">Dwellingup</option>
+    <option value="Geraldton">Geraldton</option>
+    <option value="Kununurra">Kununurra</option>
+    <option value="Manjimup">Manjimup</option>
+    <option value="Merredin">Merredin</option>
+    <option value="Perth">Perth</option>
+    <option value="Perth Hills">Perth Hills</option>
+
+  </select>
+</div>
+
+<div style="height: 100px; width:auto;text-align: center">
+  <div class="w3-white">Please Select Your Prefer Fruit: </div>
+  <select id="selectionfruit">
+    <option value="none" selected disabled hidden>Select from the options</option>  
+    <option value="Grapes">Grapes</option>
+    <option value="Apples">Apples</option>
+    <option value="Peaches">Peaches</option>
+    <option value="Melons">Melons</option>
+    <option value="Oranges">Oranges</option>
+    <option value="Pears">Pears</option>
+    <option value="Tomatoes">Tomatoes</option>
+    <option value="Bananas">Bananas</option>
+    <option value="Mangoes">Mangoes</option>
+    <option value="Apricots">Apricots</option>
+    <option value="Olives">Olives</option>
+
+  </select>
+</div>
+
+<!--<div style="height: 100px; width:auto;text-align: center">
+  <div class="w3-white">Are You Facing The Medfly Issue? </div>
+  <select id="selectissue">
+    <option value="yes">YES</option>
+    <option value="no">NO</option>
+  </select>
+</div> -->
+
+
+
+<!--botton-->
+<div style="height: 50px; text-align: center">
+    <div style="height: 0px;"></div>
+        <div class="btn btn-outline-default btn-rounded waves-effect"> 
+            <a onclick="choose()">Submit</a></div>
+</div>
+
+
+
+<!--buffer-->
+<div style="height: 54px; width:max-content;"></div>
+<div id="abc" style="height: 200px; width: auto; text-align: center"></div>
+
+
+
+
+<!--method-->
+
+
+
+<!--buffer-->
+<div style="height: 54px; width:max-content;"></div>
+
+<!-- Footer -->
+<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
+  <h5>Follow Us</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by THE FLY FIGHTERS</p>
+</footer>
+</body>
+
+
+    <script src="./js/forecast.js"></script>
+
+</body>
+</html>
+

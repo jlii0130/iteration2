@@ -1,0 +1,70 @@
+.centered {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+
+  }
+
+  .welcome{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+
+  }
+
+  .wa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .at{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .visit{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .learnmore{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  .selectionloc{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .question {
+    position: relative;
+    margin-top: 50%;
+  }
+
+  .explorepink{
+    position: absolute;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    
+  }
