@@ -69,5 +69,37 @@ app.get("/get2/:temp", (req, res) => {
     });
 });
 
+//get the mitigation method
+app.get("/get3/:farmstage", (req, res) => {
+    var farmstage = req.params.farmstage
+    
+
+    const connection = mysql.createConnection(databaseOptions);
+
+    connection.connect(function(err) {
+        if (err) {
+            console.error('error connecting: ' + err.stack);
+            return;
+        }
+        console.log('successfully connected as id ' + connection.threadId);
+
+        //write query
+        const query = 
+        "SELECT `Control Measure`, `Control Desc`, `Control Application` FROM `Control`" +
+        "JOIN `harvest_control` ON `Control`.`Control ID` = `harvest_control`.`Control ID`" + 
+        "JOIN `Harvest` on `Harvest`.`Harvest ID` = `harvest_control`.`Harvest ID`" +
+        "WHERE `Harvest`.`Harvest Stage`= '" + farmstage + "';"
+
+        connection.query(query,function (err, result) {
+            if (err){
+                res.json(err);
+            }else {
+                console.log(result);
+                res.json(result);
+            }
+        });
+    });
+});
+
 
 module.exports = app;

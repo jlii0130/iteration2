@@ -21,6 +21,7 @@ var home = require('./routes/home');
 var twoway = require('./routes/twoway');
 var questionstart = require('./routes/questionstart');
 var farmprotect = require('./routes/farmprotect');
+var mapexplore = require('./routes/mapexplore');
 
 
 
@@ -88,6 +89,7 @@ app.use('/home', home);
 app.use('/twoway', twoway);
 app.use('/questionstart', questionstart);
 app.use('/farmprotect', farmprotect);
+app.use('/mapexplore', mapexplore);
 
 // app.post('/login', function(req, res) {
 //   var user={
