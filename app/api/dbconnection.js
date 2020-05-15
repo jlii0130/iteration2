@@ -4,11 +4,14 @@ const app = express();
 const mysql = require('mysql');
 const databaseOptions = require('../config/mysqlconn');
 
-//method to get data 
-app.get("/get/:name/:fruit", (req, res) => {
-    var name = req.params.name
-    var fruit = req.params.fruit
+//method to get data for the new farmer
+app.get("/get/:fruitname/:farmsize", (req, res) => {
+    //var location = req.params.location
+    var fruitname = req.params.fruitname
+    var farmsize = req.params.farmsize
+
     const connection = mysql.createConnection(databaseOptions);
+
     connection.connect(function(err) {
         if (err) {
             console.error('error connecting: ' + err.stack);
@@ -17,7 +20,13 @@ app.get("/get/:name/:fruit", (req, res) => {
         console.log('successfully connected as id ' + connection.threadId);
 
         //write query
-        const query = "SELECT Preventive_Methods, Control_Methodds FROM TECHTOES.Medfly WHERE L_NAME=" + "'" + name + "'" + "AND F_Name=" + "'" + fruit + "'";
+        const query = 
+        "SELECT `Preventive Measure`, `Preventive Desc` " +
+        "FROM `Preventive` " +
+        "JOIN `Preventive_Fact_Table` ON Preventive.`Preventive_ID` = Preventive_Fact_Table.`Preventive_ID` "+
+        "JOIN `Fruit` ON `Fruit`.`Fruit_ID` = Preventive_Fact_Table.`Fruit_ID` " +
+        "WHERE `Fruit`.`Fruit_Name` = '" + fruitname + "' AND (`Preventive`.`Farm_Size_Min` < " + farmsize + " OR `Preventive`.`Farm_Size_Max` > " + farmsize + ");" 
+
         connection.query(query,function (err, result) {
             if (err){
                 res.json(err);
@@ -30,11 +39,13 @@ app.get("/get/:name/:fruit", (req, res) => {
 });
 
 
-app.get("/login/:name/:login", (req, res) => {
-    var loginname = req.params.Name
-    var password = req.params.id
+//for the exsiting farmer get the mitigation method
+app.get("/get2/:temp", (req, res) => {
+    //var location = req.params.location
+    var temp = req.params.temp
 
     const connection = mysql.createConnection(databaseOptions);
+
     connection.connect(function(err) {
         if (err) {
             console.error('error connecting: ' + err.stack);
@@ -43,7 +54,9 @@ app.get("/login/:name/:login", (req, res) => {
         console.log('successfully connected as id ' + connection.threadId);
 
         //write query
-        const query = "SELECT Name, id FROM TECHTOES.login WHERE L_NAME=" + "'" + loginname + "'" + "AND F_Name=" + "'" + password + "'";
+        const query = 
+        "Select count(*) from Temperature_season where `Temp_ID` = (select extract(month from current_timestamp))" +
+        "and `Low_temp` < " + temp + " and `High_temp` > " + temp;
 
         connection.query(query,function (err, result) {
             if (err){
