@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Welcome to Flyfighter/Solution</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/mdb.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./js/farmprotect.js"></script>
-    
-    
-  </head>
+
+<head>
+  <title>Welcome to Flyfighter/Solution</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mdb.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./js/farmprotect.js"></script>
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+    }
+  </style>
+
+</head>
 
 <body>
 
+  <header>
+    <!-- Navbar starts -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="/">
+        <img src="./img/Fly Fighters Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Fly Fighters
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="./">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="./#feature">Features</a>
+          <a class="nav-item nav-link" href="#">About Us</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top navbar-nav mr-auto smooth-scroll">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card ">
-    <a href="#home" class="w3-bar-item w3-button"><b>The Fly Fighters</b> </a>
-     <!--Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="/" class="w3-bar-item w3-button">Home</a>
-      <a href="./about" class="w3-bar-item w3-button">About</a> 
-      <a href="./twoway" class="w3-bar-item w3-button">Solution</a>
-      <a href="./prediction2" class="w3-bar-item w3-button">Forecast</a>
-    </div>
-  </div>
-</div>
+  </header>
 
-<div style="height: 54px; width: 100%;"></div>
+  <div style="height: 54px; width: 100%;"></div>
 
 
 
@@ -41,326 +61,321 @@
 
 
 
-<!--question(yes/no)  currently farming-->
-<div class="w3-row" id="curfarming" >
+  <!--question(yes/no)  currently farming-->
+  <div class="w3-row" id="curfarming">
     <div class="w3-half">
-        <img src="./img/tree.png" style="width:100%;height:50%">
+      <img src="./img/tree.png" style="width:100%;height:50%">
     </div>
-    
+
     <div class="w3-half w3-container">
       <!--<div style="height: 100px; width:auto;text-align: center">-->
-        <div class="w3-white">
-          <!--buffer div-->
-          <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
-            <img class="question"src="./img/currentfarm.png"style="width:100%;height:50%">
-          </div>
-          <div style="height: 54px; width:max-content;"></div>
+      <div class="w3-white">
+        <!--buffer div-->
+        <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
+          <img class="question" src="./img/currentfarm.png" style="width:100%;height:50%">
         </div>
-
-        <div>
-            <div class="w3-half">
-                <div class="w3-row" ></div>
-                <div style="height: 30px; text-align: center"></div>
-                    <div style="height: 0px;"></div>
-                        <div class="btn btn-outline-default btn-rounded waves-effect" style="margin-left: 80%"> 
-                            <a onclick="btn1()">YES</a></div>
-            </div>
-        </div>
-        <div>
-            <div class="w3-half">
-                <div class="w3-row" ></div>
-                <div style="height: 30px; text-align: center"></div>
-                    <div style="height: 0px;"></div>
-                        <div class="btn btn-outline-default btn-rounded waves-effect" style="margin-right: 80%"> 
-                            <a onclick="btn2()">No</a></div>
-            </div>
-        </div> 
-    </div>
-</div>
-
-
-<!--quention1 select fruit-->
-<div class="w3-row" id="selectfruit" style="display: none">
-    <div class="w3-half">
-        <img src="./img/tree.png" style="width:100%;height:50%">
-    </div>
-    
-    <div class="w3-half w3-container">
-      <div style="height: 100px; width:auto;text-align: center">
-        <div class="w3-white">
-          <!--buffer div-->
-          <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
-            <img class="question"src="./img/profruselect.png"style="width:100%;height:50%">
-          </div>
-            <select id="selectionarea">
-              <option value="none" selected disabled hidden>Select from the options</option> 
-              <option value="Grapes">Grapes</option>
-              <option value="Apples">Apples</option>
-              <option value="Peaches">Peaches</option>
-              <option value="Melons">Melons</option>
-              <option value="Oranges">Oranges</option>
-              <option value="Pears">Pears</option>
-              <option value="Tomatoes">Tomatoes</option>
-              <option value="Bananas">Bananas</option>
-              <option value="Mangoes">Mangoes</option>
-              <option value="Apricots">Apricots</option>
-              <option value="Olives">Olives</option>
-           </select>
-        </div>
-  
-        <!--buffer-->
         <div style="height: 54px; width:max-content;"></div>
-        <!--botton-->
-        <div style="height: 30px; text-align: center">
+      </div>
+
+      <div>
+        <div class="w3-half">
+          <div class="w3-row"></div>
+          <div style="height: 30px; text-align: center"></div>
           <div style="height: 0px;"></div>
-              <div class="btn btn-outline-default btn-rounded waves-effect"> 
-                  <a onclick="btn3()">next</a></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect" style="margin-left: 80%">
+            <a onclick="btn1()">YES</a></div>
+        </div>
+      </div>
+      <div>
+        <div class="w3-half">
+          <div class="w3-row"></div>
+          <div style="height: 30px; text-align: center"></div>
+          <div style="height: 0px;"></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect" style="margin-right: 80%">
+            <a onclick="btn2()">No</a></div>
         </div>
       </div>
     </div>
   </div>
 
 
-<!--question2 the farm size-->
-<div class="w3-row" id="farmsize" style="display: none">
+  <!--quention1 select fruit-->
+  <div class="w3-row" id="selectfruit" style="display: none">
     <div class="w3-half">
-        <img src="./img/tree.png" style="width:100%;height:50%">
+      <img src="./img/tree.png" style="width:100%;height:50%">
     </div>
-    
+
     <div class="w3-half w3-container">
       <div style="height: 100px; width:auto;text-align: center">
         <div class="w3-white">
           <!--buffer div-->
           <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
-            <img class="question"src="./img/profarmsize.png"style="width:100%;height:50%">
+            <img class="question" src="./img/profruselect.png" style="width:100%;height:50%">
           </div>
-            <select id="profarmsize">
-              <option value="none" selected disabled hidden>Select from the options</option> 
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-           </select>
+          <select id="selectionarea">
+            <option value="none" selected disabled hidden>Select from the options</option>
+            <option value="Grapes">Grapes</option>
+            <option value="Apples">Apples</option>
+            <option value="Peaches">Peaches</option>
+            <option value="Melons">Melons</option>
+            <option value="Oranges">Oranges</option>
+            <option value="Pears">Pears</option>
+            <option value="Tomatoes">Tomatoes</option>
+            <option value="Bananas">Bananas</option>
+            <option value="Mangoes">Mangoes</option>
+            <option value="Apricots">Apricots</option>
+            <option value="Olives">Olives</option>
+          </select>
         </div>
-  
+
         <!--buffer-->
         <div style="height: 54px; width:max-content;"></div>
         <!--botton-->
         <div style="height: 30px; text-align: center">
           <div style="height: 0px;"></div>
-              <div class="btn btn-outline-default btn-rounded waves-effect"> 
-                  <a onclick="btn4()">next</a></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect">
+            <a onclick="btn3()">next</a></div>
         </div>
       </div>
     </div>
   </div>
-  
+
+
+  <!--question2 the farm size-->
+  <div class="w3-row" id="farmsize" style="display: none">
+    <div class="w3-half">
+      <img src="./img/tree.png" style="width:100%;height:50%">
+    </div>
+
+    <div class="w3-half w3-container">
+      <div style="height: 100px; width:auto;text-align: center">
+        <div class="w3-white">
+          <!--buffer div-->
+          <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
+            <img class="question" src="./img/profarmsize.png" style="width:100%;height:50%">
+          </div>
+          <select id="profarmsize">
+            <option value="none" selected disabled hidden>Select from the options</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+          </select>
+        </div>
+
+        <!--buffer-->
+        <div style="height: 54px; width:max-content;"></div>
+        <!--botton-->
+        <div style="height: 30px; text-align: center">
+          <div style="height: 0px;"></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect">
+            <a onclick="btn4()">next</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!--question3 the stage of the farm-->
-<div class="w3-row" id="stage" style="display: none">
+  <div class="w3-row" id="stage" style="display: none">
     <div class="w3-half">
-        <img src="./img/tree.png" style="width:100%;height:50%">
+      <img src="./img/tree.png" style="width:100%;height:50%">
     </div>
-    
+
     <div class="w3-half w3-container">
       <div style="height: 100px; width:auto;text-align: center">
         <div class="w3-white">
           <!--buffer div-->
           <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
-            <img class="question"src="./img/profarmstage.png"style="width:100%;height:50%">
+            <img class="question" src="./img/profarmstage.png" style="width:100%;height:50%">
           </div>
-            <select id="prostage">
-              <option value="none" selected disabled hidden>Select from the options</option> 
-              <option value="Cultivate">Cultivate</option>
-              <option value="Sowing">Sowing</option>
-              <option value="Fertilize">Fertilize</option>
-              <option value="Grow">Grow</option>
-              <option value="Harvest">Harvest</option>
-           </select>
+          <select id="prostage">
+            <option value="none" selected disabled hidden>Select from the options</option>
+            <option value="Cultivate">Cultivate</option>
+            <option value="Sowing">Sowing</option>
+            <option value="Fertilize">Fertilize</option>
+            <option value="Grow">Grow</option>
+            <option value="Harvest">Harvest</option>
+          </select>
         </div>
-  
+
         <!--buffer-->
         <div style="height: 54px; width:max-content;"></div>
         <!--botton-->
         <div style="height: 30px; text-align: center">
           <div style="height: 0px;"></div>
-              <div class="btn btn-outline-default btn-rounded waves-effect"> 
-                  <a onclick="btn5()">next</a></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect">
+            <a onclick="btn5()">next</a></div>
         </div>
       </div>
     </div>
   </div>
-  
-  
+
+
 
   <!--question4(yes/no)  medfly issue-->
-<div class="w3-row" id="faceissue" style="display: none">
+  <div class="w3-row" id="faceissue" style="display: none">
     <div class="w3-half">
-        <img src="./img/tree.png" style="width:100%;height:50%">
+      <img src="./img/tree.png" style="width:100%;height:50%">
     </div>
-    
+
     <div class="w3-half w3-container">
       <!--<div style="height: 100px; width:auto;text-align: center">-->
-        <div class="w3-white">
-          <!--buffer div-->
-          <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
-            <img class="question"src="./img/profaceissue.png"style="width:100%;height:50%">
-          </div>
+      <div class="w3-white">
+        <!--buffer div-->
+        <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
+          <img class="question" src="./img/profaceissue.png" style="width:100%;height:50%">
         </div>
+      </div>
 
-        <div>
-            <div class="w3-half">
-                <div class="w3-row" ></div>
-                <div style="height: 30px; text-align: center"></div>
-                    <div style="height: 0px;"></div>
-                        <div class="btn btn-outline-default btn-rounded waves-effect" style="margin-left: 80%"> 
-                            <a onclick="btn6()">YES</a></div>
-            </div>
+      <div>
+        <div class="w3-half">
+          <div class="w3-row"></div>
+          <div style="height: 30px; text-align: center"></div>
+          <div style="height: 0px;"></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect" style="margin-left: 80%">
+            <a onclick="btn6()">YES</a></div>
         </div>
-        <div>
-            <div class="w3-half">
-                <div class="w3-row" ></div>
-                <div style="height: 30px; text-align: center"></div>
-                    <div style="height: 0px;"></div>
-                        <div class="btn btn-outline-default btn-rounded waves-effect" style="margin-right: 80%"> 
-                            <a onclick="btn7()">No</a></div>
-            </div>
-        </div> 
+      </div>
+      <div>
+        <div class="w3-half">
+          <div class="w3-row"></div>
+          <div style="height: 30px; text-align: center"></div>
+          <div style="height: 0px;"></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect" style="margin-right: 80%">
+            <a onclick="btn7()">No</a></div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<!--result page mitigation-->
-<div id="mitresult" class="w3-container w3-content w3-center w3-padding-64" style="max-width:90%;display: none" >
+  <!--result page mitigation-->
+  <div id="mitresult" class="w3-container w3-content w3-center w3-padding-64" style="max-width:90%;display: none">
     <div>
       <h2 class="w3-wide">Recommended Mitigation Methods</h2>
-    <!--buffer-->
-    <div style="height: 0px; width:max-content;"></div>
+      <!--buffer-->
+      <div style="height: 0px; width:max-content;"></div>
     </div>
     <div id="method1" style="background-color: #EDE7E5; width: 100%; height: 100%;">
       <p class="w3-justify">1234321234</p>
     </div>
-</div>
+  </div>
 
-<!--result page precautionary-->
-<div id="precauresult" class="w3-container w3-content w3-center w3-padding-64" style="max-width:90%;display: none" >
+  <!--result page precautionary-->
+  <div id="precauresult" class="w3-container w3-content w3-center w3-padding-64" style="max-width:90%;display: none">
     <div>
       <h2 class="w3-wide">Recommended Precautionary Methods</h2>
-    <!--buffer-->
-    <div style="height: 0px; width:max-content;"></div>
+      <!--buffer-->
+      <div style="height: 0px; width:max-content;"></div>
     </div>
     <div id="method2" style="background-color: #EDE7E5; width: 100%; height: 100%;">
       <p class="w3-justify">1234321234</p>
     </div>
-</div>
+  </div>
 
 
- <!--are you wish to farm "no" question1 the season-->
- <div class="w3-row" id="season" style="display: none">
+  <!--are you wish to farm "no" question1 the season-->
+  <div class="w3-row" id="season" style="display: none">
     <div class="w3-half">
-        <img src="./img/grape.jpeg" style="width:100%;height:50%">
+      <img src="./img/grape.jpeg" style="width:100%;height:50%">
     </div>
-    
+
     <div class="w3-half w3-container">
       <div style="height: 100px; width:auto;text-align: center">
         <div class="w3-white">
           <!--buffer div-->
           <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
-            <img class="question"src="./img/season.png"style="width:100%;height:50%">
+            <img class="question" src="./img/season.png" style="width:100%;height:50%">
           </div>
-            <select id="season">
-              <option value="none" selected disabled hidden>Select from the options</option> 
-              <option value="Broome">Spring</option>
-              <option value="Bunbury">Summer</option>
-              <option value="Carnarvon">Autumn</option>
-              <option value="Donnybrook">Winter</option>
-           </select>
+          <select id="season">
+            <option value="none" selected disabled hidden>Select from the options</option>
+            <option value="Broome">Spring</option>
+            <option value="Bunbury">Summer</option>
+            <option value="Carnarvon">Autumn</option>
+            <option value="Donnybrook">Winter</option>
+          </select>
         </div>
         <!--buffer-->
         <div style="height: 54px; width:max-content;"></div>
         <!--botton-->
         <div style="height: 30px; text-align: center">
           <div style="height: 0px;"></div>
-              <div class="btn btn-outline-default btn-rounded waves-effect"> 
-                  <a onclick="btn8()">next</a></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect">
+            <a onclick="btn8()">next</a></div>
         </div>
       </div>
     </div>
   </div>
-  
-<!--are you wish to farm "no" question1 the fruit-->
-<div class="w3-row" id="fruitgrow" style="display: none">
+
+  <!--are you wish to farm "no" question1 the fruit-->
+  <div class="w3-row" id="fruitgrow" style="display: none">
     <div class="w3-half">
-        <img src="./img/grape.jpeg" style="width:100%;height:50%">
+      <img src="./img/grape.jpeg" style="width:100%;height:50%">
     </div>
-    
+
     <div class="w3-half w3-container">
       <div style="height: 100px; width:auto;text-align: center">
         <div class="w3-white">
           <!--buffer div-->
           <div style="width: 50%; margin-top: 10%;  margin-left: 25%;">
-            <img class="question"src="./img/fruitgrow.png"style="width:100%;height:50%">
+            <img class="question" src="./img/fruitgrow.png" style="width:100%;height:50%">
           </div>
-            <select id="notcurfruit">
-              <option value="none" selected disabled hidden>Select from the options</option> 
-              <option value="Grape">Grape</option>
-              <option value="Apple">Apple</option>
-              <option value="Peach">Peache</option>
-              <option value="Melon">Melon</option>
-              <option value="Orange">Orange</option>
-              <option value="Pear">Pear</option>
-              <option value="Tomato">Tomato</option>
-              <option value="Banana">Banana</option>
-              <option value="Mango">Mangoe</option>
-              <option value="Apricot">Apricot</option>
-              <option value="Olive">Olive</option>
-           </select>
+          <select id="notcurfruit">
+            <option value="none" selected disabled hidden>Select from the options</option>
+            <option value="Grape">Grape</option>
+            <option value="Apple">Apple</option>
+            <option value="Peach">Peache</option>
+            <option value="Melon">Melon</option>
+            <option value="Orange">Orange</option>
+            <option value="Pear">Pear</option>
+            <option value="Tomato">Tomato</option>
+            <option value="Banana">Banana</option>
+            <option value="Mango">Mangoe</option>
+            <option value="Apricot">Apricot</option>
+            <option value="Olive">Olive</option>
+          </select>
         </div>
-  
+
         <!--buffer-->
         <div style="height: 54px; width:max-content;"></div>
         <!--botton-->
         <div style="height: 30px; text-align: center">
           <div style="height: 0px;"></div>
-              <div class="btn btn-outline-default btn-rounded waves-effect"> 
-                  <a onclick="btn9()">Get My Mitigation Recommendation</a></div>
+          <div class="btn btn-outline-default btn-rounded waves-effect">
+            <a onclick="btn9()">Get My Mitigation Recommendation</a></div>
         </div>
       </div>
     </div>
   </div>
 
   <!--result page precautionary-->
-<div id="protectmitigate" class="w3-container w3-content w3-center w3-padding-64" style="max-width:90%;display: none" >
+  <div id="protectmitigate" class="w3-container w3-content w3-center w3-padding-64" style="max-width:90%;display: none">
     <div>
       <h2 class="w3-wide">Recommended Mitigation Methods</h2>
-    <!--buffer-->
-    <div style="height: 0px; width:max-content;"></div>
+      <!--buffer-->
+      <div style="height: 0px; width:max-content;"></div>
     </div>
     <div id="method3" style="background-color: #EDE7E5; width: 100%; height: 100%;">
       <p class="w3-justify">1234321234</p>
     </div>
-</div>
+  </div>
 
 
-  <!-- Footer -->
-<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
-    <h5>Follow Us</h5>
-    <div class="w3-xlarge w3-padding-16">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <!-- Footer starts-->
+  <footer class="footer page-footer bg-dark font-small mt-auto">
+    <!-- Copyright -->
+    <div class="footer-copyright text-white text-center py-3">© 2020 Copyright:
+      <a href="http://flyfighter.bike/"> Fly Fighters</a>
     </div>
-    <p>Powered by THE FLY FIGHTERS</p>
+    <!-- Copyright -->
   </footer>
-  
-  </html>
-  
+  <!-- Footer ends-->
+
+</html>

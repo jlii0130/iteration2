@@ -12,154 +12,168 @@
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/mdb.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="http://d3js.org/d3.v4.min.js"></script> 
+  <script src="http://d3js.org/d3.v4.min.js"></script>
   <script src="./js/apiaccess.js"></script>
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+    }
+  </style>
+
 </head>
 
 
 
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>The Fly Fighters</b> </a>
-     <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="/" class="w3-bar-item w3-button">Home</a>
-      <a href="./about" class="w3-bar-item w3-button">About</a> 
-      <a href="./twoway" class="w3-bar-item w3-button">Solution</a>
-      <a href="./prediction2" class="w3-bar-item w3-button">Forecast</a>
-    </div>
-  </div>
-</div>
+  <header>
+    <!-- Navbar starts -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="/">
+        <img src="./img/Fly Fighters Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Fly Fighters
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="./">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="./#feature">Features</a>
+          <a class="nav-item nav-link" href="#">About Us</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+
+  </header>
 
 
-<!--buffer-->
-<div style="height: 100px; width:max-content;"></div>
+  <!--buffer-->
+  <div style="height: 100px; width:max-content;"></div>
 
-<!--map selection-->
-<div id="mapselection" style="height: 100px; width:auto;text-align: center;">
-  <div class="w3-white">Please the date and locationyou want to explore </div> 
-  <div>
-    <select id="selforcastdate">
-      <option value="none" selected disabled hidden>Select from the options</option>
-      <script>
-        var countDownDate = new Date();
-        para = '';
-        for(i=0;i<5;i++){
+  <!--map selection-->
+  <div id="mapselection" style="height: 100px; width:auto;text-align: center;">
+    <div class="w3-white">Please select the date and location you wish to look for:</div>
+    <div>
+      <select id="selforcastdate">
+        <option value="none" selected disabled hidden>Select from the options</option>
+        <script>
+          var countDownDate = new Date();
+          para = '';
+          for (i = 0; i < 5; i++) {
             var mydate = countDownDate.setDate(countDownDate.getDate() + 1);
             var formatedDate = formatdate(mydate)
-            var selection = '<option>' + formatedDate +'</option>'
-            para+=selection
-        }
-        para+=''
-        document.write(para)
-      </script>
-    </select>
+            var selection = '<option>' + formatedDate + '</option>'
+            para += selection
+          }
+          para += ''
+          document.write(para)
+        </script>
+      </select>
+    </div>
+    <div>
+      <select id="selectionarea">
+        <option value="none" selected disabled hidden>Select from the options</option>
+        <option value="Broome">Broome</option>
+        <option value="Bunbury">Bunbury</option>
+        <option value="Carnarvon">Carnarvon</option>
+        <option value="Donnybrook">Donnybrook</option>
+        <option value="Dwellingup">Dwellingup</option>
+        <option value="Geraldton">Geraldton</option>
+        <option value="Kununurra">Kununurra</option>
+        <option value="Manjimup">Manjimup</option>
+        <option value="Merredin">Merredin</option>
+        <option value="Perth">Perth</option>
+        <option value="Perth Hills">Perth Hills</option>
+      </select>
+    </div>
   </div>
-  <div>
-    <select id="selectionarea">
-      <option value="none" selected disabled hidden>Select from the options</option> 
-      <option value="Broome">Broome</option>
-      <option value="Bunbury">Bunbury</option>
-      <option value="Carnarvon">Carnarvon</option>
-      <option value="Donnybrook">Donnybrook</option>
-      <option value="Dwellingup">Dwellingup</option>
-      <option value="Geraldton">Geraldton</option>
-      <option value="Kununurra">Kununurra</option>
-      <option value="Manjimup">Manjimup</option>
-      <option value="Merredin">Merredin</option>
-      <option value="Perth">Perth</option>
-      <option value="Perth Hills">Perth Hills</option>
-  </select>
- </div>
-</div>
 
-<!--buffer-->
-<div style="height: 0px; width:max-content;"></div>
-<!--botton-->
-<div style="height: 30px; text-align: center">
-  <div style="height: 0px;"></div>
-    <div class="btn btn-outline-default btn-rounded waves-effect"> 
+  <!--buffer-->
+  <div style="height: 0px; width:max-content;"></div>
+  <!--botton-->
+  <div style="height: 30px; text-align: center">
+    <div style="height: 0px;"></div>
+    <div class="btn btn-outline-default btn-rounded waves-effect">
       <a onclick="predict()">GET MY FORCAST</a></div>
-</div>
+  </div>
+
+  <!--buffer-->
+  <div style="height: 150px; width:max-content; "></div>
+
+  <script>
+    var projection = d3
+      .geoMercator() //
+      .scale(2000)	//
+      .rotate([-0.25, 0.25, 0]) //
+      //.center([115.858889, -18.952222]); //
+      .center([121, -18.952222]);
+
+    var path = d3.geoPath().projection(projection);
 
 
-<div style="height: 100px; width:max-content; "></div>
+    var div = d3.select("body").append("div").attr("id", "map").attr("style", "outline: solid black;")
+    var map = div.append("svg")
+      .attr("width", 800)
+      .attr("height", 1200)
 
+    d3.json("./img/countries.geo.json", drawMaps);
 
-<!--buffer-->
-<div style="height: 150px; width:max-content; "></div>
+    var footer = '<div></div>'
+    document.write(footer)
 
-<script>
-var projection = d3
-	.geoMercator() //
-	.scale(2000)	//
-	.rotate([-0.25, 0.25, 0]) //
-        //.center([115.858889, -18.952222]); //
-  .center([121, -18.952222]);
-	                                                                                                                                                                                                                                                                                                                                      
-var path = d3.geoPath().projection(projection);　
-	
-	
-var div = d3.select("body").append("div").attr("id", "map")
-var map = div.append("svg")
-		.attr("width", 1200)
-		.attr("height", 1400); 
-
-d3.json("./img/countries.geo.json", drawMaps);
-
-var footer = '<div></div>'
-document.write(footer)
-
-//function showmap() {
+    //function showmap() {
     //$("#dateshow").show()
     //$("#map").show()
     //$("#loadmap").hide()
-//}
+    //}
 
-function drawMaps(geojson) {
-		map.selectAll("path")
-			.data(geojson.features)
-			.enter()
-			.append("path")
-			.attr("d", path)  //
-			.attr("fill", "white")
-			.attr("fill-opacity", 0.5)
-			.attr("stroke", "#222");    
-}
-</script>
+    function drawMaps(geojson) {
+      map.selectAll("path")
+        .data(geojson.features)
+        .enter()
+        .append("path")
+        .attr("d", path)  //
+        .attr("fill", "white")
+        .attr("fill-opacity", 0.5)
+        .attr("stroke", "#222");
+    }
+  </script>
 
-<div style="text-align: center"><a href="./mapexplore">
-  <img src="./img/mapexplore.jpeg" style="width: 15%;" ></a>
-</div>
-
-<!--buffer-->
-<div style="height: 54px; width:max-content;"></div>
-
-<script src="./js/apiaccess.js"></script>
-
-
-
-
-<!-- Footer -->
-<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
-  <h5>Follow Us</h5>
-  <div class="w3-xlarge w3-padding-16">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <div style="height: 30px; text-align: center">
+    <a href="./mapexplore" class="btn">Explore</a>
   </div>
-  <p>Powered by THE FLY FIGHTERS</p>
-</footer>
-  
-</body>
-</html>
 
+
+
+  <!--buffer-->
+  <div style="height: 54px; width:max-content;"></div>
+
+  <script src="./js/apiaccess.js"></script>
+
+
+  <!-- Footer starts-->
+  <footer class="footer page-footer bg-dark font-small mt-auto">
+    <!-- Copyright -->
+    <div class="footer-copyright text-white text-center py-3">© 2020 Copyright:
+      <a href="http://flyfighter.bike/"> Fly Fighters</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer ends-->
+
+</body>
+
+</html>
