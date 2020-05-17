@@ -17,24 +17,44 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./js/mapexplore.js"></script>
     
-    
+    <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+      }
+    </style>
   </head>
 
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>The Fly Fighters</b> </a>
-     <!--Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="/" class="w3-bar-item w3-button">Home</a>
-      <a href="./about" class="w3-bar-item w3-button">About</a> 
-      <a href="./twoway" class="w3-bar-item w3-button">Solution</a>
-      <a href="./prediction2" class="w3-bar-item w3-button">Forecast</a>
+<!-- Header -->
+<header>
+
+  <!-- Navbar starts -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="/">
+      <img src="./img/Fly Fighters Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Fly Fighters
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="./">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="./#feature">Features</a>
+        <a class="nav-item nav-link" href="#">About Us</a>
+      </div>
     </div>
-  </div>
-</div>
+  </nav>
+  <!-- Navbar ends -->
+</header>
 
 
 
@@ -209,17 +229,14 @@
     </div>
   </div>
 
-<!-- Footer -->
-<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
-    <h5>Follow Us</h5>
-    <div class="w3-xlarge w3-padding-16">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <p>Powered by THE FLY FIGHTERS</p>
-  </footer>
+<!-- Footer starts-->
+
+<footer class="footer page-footer bg-dark font-small blue mt-auto">
+  <!-- Copyright -->
+  <div class="footer-copyright text-white text-center py-3">© 2020 Copyright:
+    <a href="http://flyfighter.bike/"> Fly Fighters</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer ends-->
 </html>
