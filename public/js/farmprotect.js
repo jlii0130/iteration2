@@ -1,6 +1,6 @@
-//var url = 'http://ttie-env.eba-9cjewynp.ap-southeast-2.elasticbeanstalk.com'
+var url = 'http://node-express-env.eba-gmkgnjkq.ap-southeast-2.elasticbeanstalk.com'
 //local host
-var url = "http://localhost:3000"
+//var url = "http://localhost:3000"
 
 
 function btn1(){
