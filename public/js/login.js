@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var url = 'http://ttie-env.eba-9cjewynp.ap-southeast-2.elasticbeanstalk.com'
+    var url = 'http://node-express-env.eba-gmkgnjkq.ap-southeast-2.elasticbeanstalk.com'
     $('#login').click(function () {
         $.post("/login",{
             email:$('#loginFormEmail').val(),
