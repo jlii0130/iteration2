@@ -44,11 +44,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Start ==================== Temp Code//
-schedule.scheduleJob('*/10 * * * *', function(){
-  sess['email'] = '';
-  sess['pass'] = '';
-  console.log('reset the auth credential!');
-});
+// schedule.scheduleJob('*/10 * * * *', function(){
+//   sess['email'] = '';
+//   sess['pass'] = '';
+//   console.log('reset the auth credential!');
+// });
+
 app.post('/login',(req,res,next) => {
   if (secret.email !== req.body.email || secret.password !== req.body.pass){
     sess['email'] = '';
