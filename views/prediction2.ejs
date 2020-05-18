@@ -10,8 +10,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/mdb.min.css">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- <link rel="stylesheet" href="./css/mdb.min.css"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -30,147 +31,293 @@
     }
   </style>
 
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css"
+    type="text/css">
+  <style>
+    .map {
+      align-items: center;
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+  <title>OpenLayers example</title>
 </head>
-
-
 
 <body>
 
-  <header>
-    <!-- Navbar starts -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="/">
-        <img src="./img/Fly Fighters Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Fly Fighters
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="./">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="./#feature">Features</a>
-          <a class="nav-item nav-link" href="#">About Us</a>
+  <!-- Header starts -->
+  <header id="header" class="header-section">
+    <!-- Nav Bar begins -->
+    <div class="container">
+      <nav class="navbar ">
+        <div class="slicknav_menu">
+          <a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed"
+            style="outline: none;">
+            <span class="slicknav_menutxt">
+            </span>
+            <span class="slicknav_icon slicknav_no-text">
+              <span class="slicknav_icon-bar">
+              </span>
+              <span class="slicknav_icon-bar">
+              </span>
+              <span class="slicknav_icon-bar">
+              </span>
+            </span></a>
+          <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+            <li><a data-scroll="" class="nav-link active" href="index.html" role="menuitem" tabindex="-1">Home<span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="about.html" role="menuitem" tabindex="-1">About Us</a></li>
+            <li><a href="services.html" role="menuitem" tabindex="-1">Services</a></li>
+
+            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true"
+                tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;"><a href="#"
+                  tabindex="-1">Pages</a>
+                <span class="slicknav_arrow">►</span></a>
+              <ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                <li><a href="team.html" role="menuitem" tabindex="-1">Our Team</a></li>
+                <li><a href="testimonial.html" role="menuitem" tabindex="-1">Testimonial</a></li>
+              </ul>
+            </li>
+            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true"
+                tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;"><a href="#"
+                  tabindex="-1">Blog</a>
+                <span class="slicknav_arrow">►</span></a>
+
+            </li>
+            <li><a href="contact.html" role="menuitem" tabindex="-1">Contact</a></li>
+          </ul>
+        </div>
+        <a href="./" class="navbar-brand">
+          <h3><img class="logo-dark" src="./img/Fly Fighters Logo.png" width="60" height="60" alt="Fly Fighters">
+            Fly Fighters</h3>
+        </a>
+        <div class="d-flex menu-wrap">
+          <div id="mainmenu" class="mainmenu">
+            <ul class="nav">
+              <li><a data-scroll="" class="nav-link active" href="./">Home<span class="sr-only">(current)</span></a>
+              </li>
+
+              <li><a href="./#feature">Services</a></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Nav Bar ends -->
+  </header>
+  <!-- Header ends-->
+
+  <!-- Main starts -->
+  <section class="promo-section padding bg-grey">
+    <!-- <div class="food-1"></div>
+    <div class="food-2"></div> -->
+    <div class="container">
+      <div class="section-heading mb-40 text-center">
+        <!-- <img src="img/title-border.png" alt="img"> -->
+        <h2>Medfly Forecast</h2>
+        <p>Let us check if your location is affected by Medfly in the next 5 days</p>
+      </div>
+      <div class="promo-wrap row">
+        <div class="col-md-6 col-sm-6 xs-padding">
+          <div class="promo-item text-center">
+            <i class="food-icon food-iconolives"></i>
+
+            <!--map selection-->
+            <div id="mapselection" style="height: 100px; width:auto;text-align: center;">
+              <div class="w3-white">Select Date and Location:</div>
+              <div style="height: 20px; width:max-content;"></div>
+              <div>
+                <select id="selforcastdate">
+                  <option value="none" selected disabled hidden>Select the date</option>
+                  <script>
+                    var countDownDate = new Date();
+                    para = '';
+                    for (i = 0; i < 5; i++) {
+                      var mydate = countDownDate.setDate(countDownDate.getDate() + 1);
+                      var formatedDate = formatdate(mydate)
+                      var selection = '<option>' + formatedDate + '</option>'
+                      para += selection
+                    }
+                    para += ''
+                    document.write(para)
+                  </script>
+                </select>
+              </div>
+              <div style="height: 20px; width:max-content;"></div>
+              <div>
+                <select id="selectionarea">
+                  <option value="none" selected disabled hidden>Select the location</option>
+                  <option value="Broome">Broome</option>
+                  <option value="Bunbury">Bunbury</option>
+                  <option value="Carnarvon">Carnarvon</option>
+                  <option value="Donnybrook">Donnybrook</option>
+                  <option value="Dwellingup">Dwellingup</option>
+                  <option value="Geraldton">Geraldton</option>
+                  <option value="Kununurra">Kununurra</option>
+                  <option value="Manjimup">Manjimup</option>
+                  <option value="Merredin">Merredin</option>
+                  <option value="Perth">Perth</option>
+                  <option value="Perth Hills">Perth Hills</option>
+                </select>
+              </div>
+            </div>
+
+            <!--buffer-->
+            <!-- <div style="height: 0px; width:max-content;"></div> -->
+            <!--botton-->
+            <div style="height: 30px; text-align: center">
+              <div style="height: 0px;"></div>
+              <div class="btn btn-outline-default btn-rounded waves-effect">
+                <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;"  onclick="predict()">Submit</a></div>
+            
+                <p id="result-negative" style="display: none;">There is a very high probability of Medfly attack</p>
+                <p id="result-positive" style="display: none;">There is a very less probability of Medfly attack</p>
+                
+              </div>
+            <div>
+
+            </div>
+
+            <!--buffer-->
+            <div style="height: 150px; width:max-content; "></div>
+            
+
+            <!--buffer-->
+            <!-- <div style="height: 54px; width:max-content;"></div> -->
+
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 xs-padding">
+          <div class="promo-item text-center">
+            <i class="food-icon food-iconolives"></i>
+            <div class="w3-white">Learn ways to protect your farm from Medfly</div>
+            <div style="height: 30px; text-align: center">
+              <div class="btn btn-outline-default btn-rounded waves-effect">
+                <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;" href="./mapexplore">Explore</a>
+              </div>
+            </div>
+            <!-- <script>
+              var projection = d3
+                .geoMercator() //
+                .scale(2000)	//
+                .rotate([-0.25, 0.25, 0]) //
+                //.center([115.858889, -18.952222]); //
+                .center([121, -18.952222]);
+
+              var path = d3.geoPath().projection(projection);
+
+
+              var div = d3.select("body").append("div").attr("id", "map").attr("style", "outline: solid black;")
+              var map = div.append("svg")
+                .attr("width", 800)
+                .attr("height", 1200)
+
+              d3.json("./img/countries.geo.json", drawMaps);
+
+              var footer = '<div></div>'
+              document.write(footer)
+
+              function drawMaps(geojson) {
+                map.selectAll("path")
+                  .data(geojson.features)
+                  .enter()
+                  .append("path")
+                  .attr("d", path)  //
+                  .attr("fill", "white")
+                  .attr("fill-opacity", 0.5)
+                  .attr("stroke", "#222");
+              }
+            </script> -->
+            <!-- <div id="map" class="map"></div> -->
+            <!-- <script type="text/javascript">
+
+              var point = new ol.geom.Point(
+                ol.proj.transform([3, 50], 'EPSG:4326', 'EPSG:3857')
+              );
+             
+
+              // Features
+              var pointFeature = new ol.Feature(point);
+              
+              // Source and vector layer
+              var vectorSource = new ol.source.Vector({
+                projection: 'EPSG:4326',
+                features: [pointFeature]
+              });
+
+              var style = new ol.style.Style({
+                fill: new ol.style.Fill({
+                  color: 'rgba(255, 100, 50, 0.3)'
+                }),
+                stroke: new ol.style.Stroke({
+                  width: 2,
+                  color: 'rgba(255, 100, 50, 0.8)'
+                }),
+                image: new ol.style.Circle({
+                  fill: new ol.style.Fill({
+                    color: 'rgba(55, 200, 150, 0.5)'
+                  }),
+                  stroke: new ol.style.Stroke({
+                    width: 1,
+                    color: 'rgba(55, 200, 150, 0.8)'
+                  }),
+                  radius: 7
+                }),
+              });
+
+              var vectorLayer = new ol.layer.Vector({
+                source: vectorSource,
+                style: style
+              });
+
+              // Maps
+              const WALonLat = [119.6283, -24.6728];
+              const WAWebMercator = ol.proj.fromLonLat(WALonLat);
+              var map = new ol.Map({
+                target: 'map',  // The DOM element that will contains the map
+                renderer: 'canvas', // Force the renderer to be used
+                layers: [
+                  // Add a new Tile layer getting tiles from OpenStreetMap source
+                  new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                  }),
+                  vectorLayer
+                ],
+                // Create a view centered on the specified location and zoom level
+                view: new ol.View({
+                  center: WAWebMercator,
+                  zoom: 4.5
+                })
+              });
+
+
+            </script> -->
+
+            <!--buffer-->
+            <!-- <div style="height: 26px; width:max-content;"></div> -->
+
+          </div>
         </div>
       </div>
-    </nav>
-    <!-- Navbar ends -->
-
-  </header>
-
-
-  <!--buffer-->
-  <div style="height: 100px; width:max-content;"></div>
-
-  <!--map selection-->
-  <div id="mapselection" style="height: 100px; width:auto;text-align: center;">
-    <div class="w3-white">Please select the date and location you wish to look for:</div>
-    <div>
-      <select id="selforcastdate">
-        <option value="none" selected disabled hidden>Select from the options</option>
-        <script>
-          var countDownDate = new Date();
-          para = '';
-          for (i = 0; i < 5; i++) {
-            var mydate = countDownDate.setDate(countDownDate.getDate() + 1);
-            var formatedDate = formatdate(mydate)
-            var selection = '<option>' + formatedDate + '</option>'
-            para += selection
-          }
-          para += ''
-          document.write(para)
-        </script>
-      </select>
     </div>
-    <div>
-      <select id="selectionarea">
-        <option value="none" selected disabled hidden>Select from the options</option>
-        <option value="Broome">Broome</option>
-        <option value="Bunbury">Bunbury</option>
-        <option value="Carnarvon">Carnarvon</option>
-        <option value="Donnybrook">Donnybrook</option>
-        <option value="Dwellingup">Dwellingup</option>
-        <option value="Geraldton">Geraldton</option>
-        <option value="Kununurra">Kununurra</option>
-        <option value="Manjimup">Manjimup</option>
-        <option value="Merredin">Merredin</option>
-        <option value="Perth">Perth</option>
-        <option value="Perth Hills">Perth Hills</option>
-      </select>
-    </div>
-  </div>
+  </section>
+  <!-- Maint ends -->
 
-  <!--buffer-->
-  <div style="height: 0px; width:max-content;"></div>
-  <!--botton-->
-  <div style="height: 30px; text-align: center">
-    <div style="height: 0px;"></div>
-    <div class="btn btn-outline-default btn-rounded waves-effect">
-      <a onclick="predict()">GET MY FORCAST</a></div>
-  </div>
-
-  <!--buffer-->
-  <div style="height: 150px; width:max-content; "></div>
-
-  <script>
-    var projection = d3
-      .geoMercator() //
-      .scale(2000)	//
-      .rotate([-0.25, 0.25, 0]) //
-      //.center([115.858889, -18.952222]); //
-      .center([121, -18.952222]);
-
-    var path = d3.geoPath().projection(projection);
-
-
-    var div = d3.select("body").append("div").attr("id", "map").attr("style", "outline: solid black;")
-    var map = div.append("svg")
-      .attr("width", 800)
-      .attr("height", 1200)
-
-    d3.json("./img/countries.geo.json", drawMaps);
-
-    var footer = '<div></div>'
-    document.write(footer)
-
-    //function showmap() {
-    //$("#dateshow").show()
-    //$("#map").show()
-    //$("#loadmap").hide()
-    //}
-
-    function drawMaps(geojson) {
-      map.selectAll("path")
-        .data(geojson.features)
-        .enter()
-        .append("path")
-        .attr("d", path)  //
-        .attr("fill", "white")
-        .attr("fill-opacity", 0.5)
-        .attr("stroke", "#222");
-    }
-  </script>
-
-  <div style="height: 30px; text-align: center">
-    <a href="./mapexplore" class="btn">Explore</a>
-  </div>
-
-
-
-  <!--buffer-->
-  <div style="height: 54px; width:max-content;"></div>
-
-  <script src="./js/apiaccess.js"></script>
-
+  <!-- <script src="./js/apiaccess.js"></script> -->
 
   <!-- Footer starts-->
-  <footer class="footer page-footer bg-dark font-small mt-auto">
+  <footer class="page-footer footer bg-dark font-small blue">
+
     <!-- Copyright -->
     <div class="footer-copyright text-white text-center py-3">© 2020 Copyright:
-      <a href="http://flyfighter.bike/"> Fly Fighters</a>
+      <a href="http://iteration2.flyfighter.bike/"> Fly Fighters</a>
     </div>
     <!-- Copyright -->
+
   </footer>
   <!-- Footer ends-->
 

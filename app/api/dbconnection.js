@@ -21,7 +21,7 @@ app.get("/get/:fruitname/:farmsize", (req, res) => {
 
         //write query
         const query = 
-        "SELECT `Preventive Measure`, `Preventive Desc` " +
+        "SELECT `Preventive Measure`, `Preventive Desc`, `Preventive Application`, `Preventive Explanation` " +
         "FROM `Preventive` " +
         "JOIN `Preventive_Fact_Table` ON Preventive.`Preventive_ID` = Preventive_Fact_Table.`Preventive_ID` "+
         "JOIN `Fruit` ON `Fruit`.`Fruit_ID` = Preventive_Fact_Table.`Fruit_ID` " +
@@ -85,7 +85,7 @@ app.get("/get3/:farmstage", (req, res) => {
 
         //write query
         const query = 
-        "SELECT `Control Measure`, `Control Desc`, `Control Application` FROM `Control`" +
+        "SELECT `Control Measure`, `Control Desc`, `Control Application`, `Control Explanation` FROM `Control`" +
         "JOIN `harvest_control` ON `Control`.`Control ID` = `harvest_control`.`Control ID`" + 
         "JOIN `Harvest` on `Harvest`.`Harvest ID` = `harvest_control`.`Harvest ID`" +
         "WHERE `Harvest`.`Harvest Stage`= '" + farmstage + "';"
@@ -118,7 +118,7 @@ app.get("/get4/:farmstage", (req, res) => {
 
         //write query
         const query = 
-        "SELECT `Preventive Measure`, `Preventive Desc`, `Preventive Application` FROM `Preventive`" + 
+        "SELECT `Preventive Measure`, `Preventive Desc`, `Preventive Application`, `Preventive Explanation` FROM `Preventive`" + 
         "JOIN `harvest_preventive` ON `Preventive`.`Preventive_ID` = `harvest_preventive`.`Preventive_ID`" +
         "JOIN `Harvest` on `Harvest`.`Harvest ID` = `harvest_preventive`.`Harvest ID`" +
         "WHERE `Harvest`.`Harvest Stage` = '" + farmstage + "';"
@@ -149,7 +149,7 @@ app.get("/get5/:fruit", (req, res) => {
 
         //write query
         const query = 
-        "SELECT `Control Measure`, `Control Desc`, `Control Application` FROM `Control`" +
+        "SELECT `Control Measure`, `Control Desc`, `Control Application`, `Control Explanation` FROM `Control`" +
         "JOIN `Control_Fact_Table` ON `Control`.`Control ID` = `Control_Fact_Table`.`Control ID`" +
         "JOIN `Fruit` ON `Fruit`.`Fruit_ID` = `Control_Fact_Table`.`Fruit_ID`" +
         "WHERE `Fruit`.`Fruit_Name` = '" + fruit + "';"

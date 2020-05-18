@@ -23,11 +23,14 @@ function predict() {
                     var temp = data.list[i].main.temp
                     console.log(temp)
                     searchInDatabase(temp,coord)
+
+
                     break
                 }
             }
         }
     })
+
 }
 
 function searchInDatabase(temp, coord) {
@@ -36,14 +39,22 @@ function searchInDatabase(temp, coord) {
         success: function(data) {
             console.log("find data", data)
             var count = data[0]["count(*)"]
+         var res_neg = document.getElementById("result-negative")
+         var res_pos = document.getElementById("result-positive")
             if (count == 0) {
+                res_neg.style.display = "none"
+                res_pos.style.display = "block"
                 drawCircle("rgb(0,255,0)", coord)
             } else {
+                res_neg.style.display = "block"
+                res_pos.style.display = "none"
                 drawCircle("rgb(255,0,0)", coord)
             }
         }
     })
 }
+
+
 
 function drawCircle(color, coord) {
     var point = [coord.lon, coord.lat]

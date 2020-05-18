@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="./css/bootstrap.css">
-<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/main.css">
+<!-- <link rel="stylesheet" href="./css/style.css"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
@@ -22,97 +23,118 @@
 
 <body>
 
-  <header>
-    <!-- Navbar starts -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="/">
-        <img src="./img/Fly Fighters Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Fly Fighters
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="./">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="./#feature">Features</a>
-          <a class="nav-item nav-link" href="#">About Us</a>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar ends -->
+  <!-- Header starts -->
+  <header id="header" class="header-section">
+    <!-- Nav Bar begins -->
+    <div class="container">
+      <nav class="navbar ">
+        <div class="slicknav_menu">
+          <a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed"
+            style="outline: none;">
+            <span class="slicknav_menutxt">
+            </span>
+            <span class="slicknav_icon slicknav_no-text">
+              <span class="slicknav_icon-bar">
+              </span>
+              <span class="slicknav_icon-bar">
+              </span>
+              <span class="slicknav_icon-bar">
+              </span>
+            </span></a>
+          <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+            <li><a data-scroll="" class="nav-link active" href="index.html" role="menuitem" tabindex="-1">Home<span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="about.html" role="menuitem" tabindex="-1">About Us</a></li>
+            <li><a href="services.html" role="menuitem" tabindex="-1">Services</a></li>
 
+            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true"
+                tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;"><a href="#"
+                  tabindex="-1">Pages</a>
+                <span class="slicknav_arrow">►</span></a>
+              <ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                <li><a href="team.html" role="menuitem" tabindex="-1">Our Team</a></li>
+                <li><a href="testimonial.html" role="menuitem" tabindex="-1">Testimonial</a></li>
+              </ul>
+            </li>
+            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true"
+                tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;"><a href="#"
+                  tabindex="-1">Blog</a>
+                <span class="slicknav_arrow">►</span></a>
+
+            </li>
+            <li><a href="contact.html" role="menuitem" tabindex="-1">Contact</a></li>
+          </ul>
+        </div>
+        <a href="./" class="navbar-brand">
+          <h3><img class="logo-dark" src="./img/Fly Fighters Logo.png" width="60" height="60" alt="Fly Fighters">
+            Fly Fighters</h3>
+        </a>
+        <div class="d-flex menu-wrap">
+          <div id="mainmenu" class="mainmenu">
+            <ul class="nav">
+              <li><a data-scroll="" class="nav-link active" href="./">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li><a href="./#aboutus">About Us</a></li>
+              <li><a href="./#feature">Services</a></li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Nav Bar ends -->
   </header>
+  <!-- Header ends-->
+
+  <!-- Main starts -->
+  <section class="gallery-section padding bg-grey">
+    <div class="container">
+      <div class="section-heading mb-40 text-center">
+        <!-- <img src="img/title-border.png" alt="img"> -->
+        <h2>Our Services</h2>
+        <p>As a farmer, there are a lot of things to keep an eye on. Being a farmer from WA, additional concerns are
+          of Medfly attacks. <br>Here, in Fly Fighters, we get you the best possible strategies to secure and restrain
+          the Medfly spread.</p>
+      </div>
+      <div class="gallery-wrap row">
+        <div class="col-lg-6 col-sm-6 padding-15">
+          <div class="gallery-item">
+            <img src="/img/eddie-kopp-5FsE88h3Wak-unsplash.jpg" alt="img">
+            <div class="gallery-content">
+              <h3><a class="img-popup vbox-item" href="./farmprotect">Farm Protection<span>Ways to defend your farm from
+                    Medfly.</span></a></h3>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 padding-15">
+          <div class="gallery-item">
+            <img src="./img/sara-the-freak-A4UojtraSrw-unsplash.jpg" alt="img">
+            <div class="gallery-content">
+              <h3><a class="img-popup vbox-item" href="./prediction2">Forecast<span>Discover Medfly attack in your
+                    area.</span></a></h3>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- Main ends -->
 
   <div style="height: 100px; width: 100%;"></div>
 
-  <main>
-    <!--content1 two solutions-->
-    
-    <div class="container">
-    <div class="card-deck">
-      <div class="card">
-        <img class="card-img-top" src="./img/jed-owen-1JgUGDdcWnM-unsplash.jpg" alt="Card image cap">
-        <div class="card-body" style="background-color: #BEBBBB;">
-          <h5 class="card-title">Forecast</h5>
-          <p class="card-text">Discover Medfly attack in your area.</p>
-          <div style="height: 30px; text-align: center">
-            <a href="./prediction2" class="btn">Explore</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <img class="card-img-top" src="./img/jesse-orrico-IdjxBF_StBk-unsplash-2.jpg" alt="Card image cap">
-        <div class="card-body" style="background-color: #BEBBBB;">
-          <h5 class="card-title">Farm Protection</h5>
-          <p class="card-text">Ways to defend your farm from Medfly.</p>
-          <div style="height: 30px; text-align: center">
-            <a href="./farmprotect" class="btn">Explore</a>
-            </div>
-        </div>
-      </div>
-      <!-- buffer  -->
-      <div style="height: 54px; width:max-content;"></div>
-      <div id="qwert" style="height: 200px; width: auto; text-align: center"></div>
+   <!-- Footer starts-->
+   <footer class="page-footer footer bg-dark font-small blue">
 
-    </div>
-  </div>
-
-
-    <!--forcast/map-->
-    <!-- <div class="w3-row w3-container" style="margin-left: 15%; margin-right: 15%;"> -->
-      <!-- <div class="w3-half w3-container">
-        <img src="./img/twowayforcast.png" style="width:100%;height:150%">
-        <div style="height: 30px; text-align: center">
-          <a href="./prediction2" class="btn">Explore</a>
-        </div>
-
-      </div> -->
-
-      <!--Farm protection-->
-      <!-- <div class="w3-half w3-container">
-        <img src="./img/twowayprotection.png" style="width:100%;height:150%">
-        <div style="height: 30px; text-align: center">
-        <a href="./farmprotect" class="btn">Explore</a>
-        </div>
-       
-      </div> -->
-    <!-- </div> -->
-
-    <!--buffer-->
-    <!-- <div style="height: 50px; width:max-content;"></div> -->
-
-  </main>
-
-  <!-- Footer starts-->
-
-  <footer class="footer page-footer bg-dark font-small mt-auto">
     <!-- Copyright -->
     <div class="footer-copyright text-white text-center py-3">© 2020 Copyright:
-      <a href="http://flyfighter.bike/"> Fly Fighters</a>
+      <a href="http://iteration2.flyfighter.bike/"> Fly Fighters</a>
     </div>
     <!-- Copyright -->
+
   </footer>
   <!-- Footer ends-->
 </body>

@@ -7,207 +7,203 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="./css/bootstrap.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
   <!-- Header starts -->
-  <header class="v-header container">
-    <!-- Navbar (sit on top) -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="#">
-        <img src="./img/Fly Fighters Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        Fly Fighters
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#feature">Features</a>
-          <a class="nav-item nav-link" href="#">About Us</a>
+  <header id="header" class="header-section">
+    <!-- Nav Bar begins -->
+    <div class="container">
+      <nav class="navbar ">
+        <div class="slicknav_menu">
+          <a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed"
+            style="outline: none;">
+            <span class="slicknav_menutxt">
+            </span>
+            <span class="slicknav_icon slicknav_no-text">
+              <span class="slicknav_icon-bar">
+              </span>
+              <span class="slicknav_icon-bar">
+              </span>
+              <span class="slicknav_icon-bar">
+              </span>
+            </span></a>
+          <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+            <li><a data-scroll="" class="nav-link active" href="index.html" role="menuitem" tabindex="-1">Home<span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li><a href="about.html" role="menuitem" tabindex="-1">About Us</a></li>
+            <li><a href="services.html" role="menuitem" tabindex="-1">Services</a></li>
+
+            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true"
+                tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;"><a href="#"
+                  tabindex="-1">Pages</a>
+                <span class="slicknav_arrow">►</span></a>
+              <ul role="menu" class="slicknav_hidden" aria-hidden="true" style="display: none;">
+                <li><a href="team.html" role="menuitem" tabindex="-1">Our Team</a></li>
+                <li><a href="testimonial.html" role="menuitem" tabindex="-1">Testimonial</a></li>
+              </ul>
+            </li>
+            <li class="slicknav_collapsed slicknav_parent"><a href="#" role="menuitem" aria-haspopup="true"
+                tabindex="-1" class="slicknav_item slicknav_row" style="outline: none;"><a href="#"
+                  tabindex="-1">Blog</a>
+                <span class="slicknav_arrow">►</span></a>
+
+            </li>
+            <li><a href="contact.html" role="menuitem" tabindex="-1">Contact</a></li>
+          </ul>
         </div>
-      </div>
-    </nav>
+        <a href="./" class="navbar-brand">
+          <h3><img class="logo-dark" src="./img/Fly Fighters Logo.png" width="60" height="60" alt="Fly Fighters">
+          Fly Fighters</h3>
+        </a>
+        <div class="d-flex menu-wrap">
+          <div id="mainmenu" class="mainmenu">
+            <ul class="nav">
+              <li><a data-scroll="" class="nav-link active" href="./">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li><a href="#feature">Services</a></li>
+              </li>
+            
 
-    <!-- <div id="intro" class="view"> -->
-    <div class="fullscreen-video-wrap">
-      <!-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%; height: 100%;">
-        <source src="./img/homepage_video.mp4" type="video/mp4">
-      </video> -->
-      <img src="./img/kelly-sikkema-E8AYWP4U6w0-unsplash.jpg" class="img-fluid " alt="Responsive image">
-    </div>
-    <div class="overlay"></div>
-    <div class="header-content text-md-center">
-      <div class="container h-100">
-
-        <div class="d-flex h-100 text-center align-items-center">
-
-          <div class="w-100">
-
-            <p class="display-3 col-sm-12 col-md-12 col-lg-12" style="font-size:4.9vw;">Welcome Aussie Farmers!!! </p>
-            <p class="lead mb-0 col-sm-12 col-md-12 col-lg-12" style="font-size:2.7vw;">
-              At Fly Fighters, we aim to
-              assist you with the Medfly issue
-              by offering you the right measures suitable per your need.</p>
-            <!-- <p class="lead mb-0 col-sm-12 col-md-12 col-lg-12" style="font-size:2.7vw;"></p> -->
-            <p class="lead mb-0 col-sm-12 col-md-12 col-lg-12" style="font-size:2.7vw;">
-              Visit us today and see what makes us unique!</p>
-            <!-- <p> </p> -->
-            <a class="btn" role="button" href="#abc" style="font-size:2.0vw;">Find out more</a>
+            </ul>
+          </div>
+          <div class="header-right">
+            <a class="menu-btn btn-white" href="#abc">Get Started</a>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
-
+    <!-- Nav Bar ends -->
   </header>
   <!-- Header ends-->
 
+  <!-- Cover Page begins -->
+  <div id="cover">
+    <div class="v-header container">
+      <div class="fullscreen-video-wrap">
+        <!-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%; height: 100%;">
+      <source src="./img/homepage_video.mp4" type="video/mp4">
+    </video> -->
+        <img src="./img/kelly-sikkema-E8AYWP4U6w0-unsplash.jpg" class="img-fluid " alt="Responsive image">
+      </div>
+      <!-- <div class="overlay"></div> -->
+      <div class="header-content text-md-center">
+        <div class="container h-100">
+
+          <div class="d-flex h-100 text-center align-items-center">
+
+            <div class="w-100">
+
+              <p class="display-3 col-sm-12 col-md-12 col-lg-12" style="font-size:4.9vw;">Welcome Aussie Farmers!!! </p>
+              <p class="lead mb-0 col-sm-12 col-md-12 col-lg-12" style="font-size:2.7vw;">
+                At Fly Fighters, we aim to
+                assist you with the Medfly issue
+                by offering you the right measures suitable per your need.</p>
+              <!-- <p class="lead mb-0 col-sm-12 col-md-12 col-lg-12" style="font-size:2.7vw;"></p> -->
+              <p class="lead mb-0 col-sm-12 col-md-12 col-lg-12" style="font-size:2.7vw;">
+                Visit us today and see what makes us unique!</p>
+              <!-- <p> </p> -->
+              
+              <a class="btn" role="button" href="#abc" style="background-color: #34ad54; font-size:2.0vw;">Find out more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cover Page ends -->
+
   <!-- Main starts -->
   <main>
-
     <!-- Feature Section Starts -->
-    <div class="container">
-      <div id="feature" class="w3-row-padding w3-center w3-margin-top" style="margin-left: 10%; margin-right: 10%;">
-        <!--buffer-->
-        <div style="height: 0px; width:max-content;"></div>
-        <div id="qwert" style="height: 75px; width: auto; text-align: center"></div>
-
-        <div class="row d-flex align-items-center">
-          <div class="col-md-12" style="align-items: center;">
-            <h2>Services</h2>
-            <!-- <p>As a farmer, there are a lot of things to keep an eye on. Being a farmer from WA, additional concerns are
-              of Medfly attacks. </p>
-            <p>Here, in Fly Fighters, we get you the best possible strategies to secure and restrain the Medfly spread.
-            </p> -->
-          </div>
+    <section id="feature" class="gallery-section padding">
+      <div class="container">
+        <div class="section-heading mb-40 text-center">
+          <!-- <img src="img/title-border.png" alt="img"> -->
+          <h2>Our Services</h2>
+          <p>As a farmer, there are a lot of things to keep an eye on. Being a farmer from WA, additional concerns are
+            of Medfly attacks. <br>Here, in Fly Fighters, we get you the best possible strategies to secure and restrain
+            the Medfly spread.</p>
         </div>
+        <div class="gallery-wrap row">
+          <div class="col-lg-6 col-sm-6 padding-15">
+            <div class="gallery-item">
+              <img src="./img/eddie-kopp-5FsE88h3Wak-unsplash.jpg" alt="img">
+              <div class="gallery-content">
+                <h3><a class="img-popup vbox-item" href="/img/eddie-kopp-5FsE88h3Wak-unsplash.jpg">Unique<span>Get unique
+                      solutions to your problems.</span></a></h3>
 
-
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="./img/cdc-T9SwaYf6g40-unsplash.jpg" alt="Card image cap">
-            <div class="card-body" style="background-color: #BEBBBB;">
-              <h3 class="card-title">Unique</h3>
-              <h5 class="card-text">Get unique solutions to your problems.</h5>
-              <p class="card-text">With a lot to do in farming, it is overwhelming to read multiple articles about
-                different Medfly mitigation strategies. Even if you find time to read and understand these strategies,
-                yet another task is to choose these strategies suitable for your farm. </p>
-
-              <p class="card-text">We can help you solve this dilemma. With a few simple set of questions, we would
-                recommend you the best strategy suitable to your farm.</p>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="./img/sara-the-freak-A4UojtraSrw-unsplash.jpg" alt="Card image cap">
-            <div class="card-body" style="background-color: #BEBBBB;">
-              <h3 class="card-title">Accurate</h3>
-              <h5 class="card-text">Get accurate prediction to be a step ahead.</h5>
-              <p class="card-text">With these tiny monsters sneaking into your farm wrecking on all your hard work, the
-                pain is real. Even though we got exceptional mitigation methods, we understand the distress even if a
-                single fruit gets damaged.</p>
-
-              <p class="card-text">What if we can predict the Medfly movement? The simple answer is yes.</p>
-
+          <div class="col-lg-6 col-sm-6 padding-15">
+            <div class="gallery-item">
+              <img src="./img/sara-the-freak-A4UojtraSrw-unsplash.jpg" alt="img">
+              <div class="gallery-content">
+                <h3><a class="img-popup vbox-item"
+                    href="../img/sara-the-freak-A4UojtraSrw-unsplash.jpg">Accurate<span>Get accurate prediction to be a
+                      step ahead.</span></a></h3>
+              </div>
             </div>
           </div>
-          <!-- buffer  -->
-          <div style="height: 54px; width:max-content;"></div>
-          <div id="qwert" style="height: 200px; width: auto; text-align: center"></div>
+
 
         </div>
-
-        <!-- buffer  -->
-        <!-- <div style="height: 54px; width:max-content;"></div>
-          <div id="qwert" style="height: 200px; width: auto; text-align: center"></div>
-   -->
       </div>
-
-    </div>
+    </section>
     <!-- Feature Section Ends -->
+
     <!-- Solution Section Starts-->
-    <div class="container">
-      <div id="abc" class="w3-row-padding w3-center w3-margin-top" style="margin-left: 10%; margin-right: 10%;">
-        <!--buffer-->
-        <div style="height: 0px; width:max-content;"></div>
-        <div id="qwert" style="height: 100px; width: auto; text-align: center"></div>
-
-        <div class="row d-flex align-items-center">
-          <div class="col-md-12" style="align-items: center;">
-            <h2>Let's get to know you!!!</h2>
-            <h4>Choose what suits you best</h4>
-          </div>
+    <section id="abc" class="promo-section padding bg-grey pos-rel">
+      <div class="food-1"></div>
+      <div class="food-2"></div>
+      <div class="container">
+        <div class="section-heading mb-40 text-center">
+          <!-- <img src="img/title-border.png" alt="img"> -->
+          <h2>Let's get started</h2>
+          <p>Choose what suits you best</p>
         </div>
-
-        <!-- User section -->
-        <div class="card-deck">
-          <div class="card">
-            <img class="card-img-top" src="./img/jed-owen-1JgUGDdcWnM-unsplash.jpg" alt="Card image cap">
-            <div class="card-body" style="background-color: #BEBBBB;">
-              <h5 class="card-title">New as a Farmer</h5>
-              <p class="card-text">There are lot of things to catch up, let Medfly be your least concern.</p>
-
-              <a class="btn" href="./prediction" role="button">Explore</a>
+        <div class="promo-wrap row">
+          <div class="col-md-6 col-sm-6 xs-padding">
+            <div class="promo-item text-center">
+              <i class="food-icon food-iconolives"></i>
+              <img src="./img/jed-owen-1JgUGDdcWnM-unsplash.jpg" alt="img">
+              <h3>New as a Farmer</h3>
+              <p>There are lot of things to catch up, let Medfly be your least concern.</p>
+             
+              <a class="btn" href="./prediction" role="button" style="font-size: 2vw;">Explore</a>
             </div>
           </div>
-          <div class="card">
-            <img class="card-img-top" src="./img/jesse-orrico-IdjxBF_StBk-unsplash-2.jpg" alt="Card image cap">
-            <div class="card-body" style="background-color: #BEBBBB;">
-              <h5 class="card-title">Seasoned Farmer</h5>
-              <p class="card-text">Medfly spreads like a grass fire, even the seasoned farmer can be caught out.</p>
-              
-              <a class="btn" href="./twoway" role="button">Explore</a>
+          <div class="col-md-6 col-sm-6 xs-padding">
+            <div class="promo-item text-center">
+              <i class="food-icon food-iconcauliflower"></i>
+              <img src="./img/jesse-orrico-IdjxBF_StBk-unsplash-2.jpg" alt="img">
+              <h3>Seasoned Farmer</h3>
+              <p>Medfly spreads like a grass fire, even the seasoned farmer can be caught out.</p>
+              <a class="btn" href="./twoway" role="button" style="font-size: 2vw;">Explore</a>
             </div>
           </div>
-          <!-- buffer  -->
-          <div style="height: 54px; width:max-content;"></div>
-          <div id="qwert" style="height: 200px; width: auto; text-align: center"></div>
 
         </div>
-        <!-- User section -->
-        <!-- buffer  -->
-        <!-- <div style="height: 54px; width:max-content;"></div>
-          <div id="qwert" style="height: 200px; width: auto; text-align: center"></div>
-   -->
       </div>
-
-    </div>
+    </section>
     <!-- Solution Section Ends-->
 
-    <!-- About Us -->
 
-    <!-- About Us -->
   </main>
   <!-- Main ends -->
-
-  <!-- Footer starts-->
-
-  <!-- <footer class="w3-padding-32 w3-black w3-center w3-margin-top">
-    <h5>Follow Us</h5>
-    <div class="w3-xlarge w3-padding-16">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <p>Powered by THE FLY FIGHTERS</p>
-  </footer> -->
-
-  <!-- buffer  -->
-  <div style="height: 54px; width:max-content;"></div>
-  <div id="qwert" style="height: 50px; width: auto; text-align: center"></div>
 
   <!-- Footer -->
   <footer class="page-footer bg-dark font-small blue">
 
     <!-- Copyright -->
     <div class="footer-copyright text-white text-center py-3">© 2020 Copyright:
-      <a href="http://flyfighter.bike/"> Fly Fighters</a>
+      <a href="http://iteration2.flyfighter.bike/"> Fly Fighters</a>
     </div>
     <!-- Copyright -->
 
