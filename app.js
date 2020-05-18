@@ -57,7 +57,7 @@ app.post('/login',(req,res,next) => {
   }else {
     sess['email'] = req.body.email;
     sess['pass'] = req.body.pass;
-    res.json(['success']);
+    //res.json(['success']);
   }
 });
 
