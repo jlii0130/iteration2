@@ -8,70 +8,113 @@
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+</style>
 
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>The Fly Fighters</b> </a>
-     <!--Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="/" class="w3-bar-item w3-button">Home</a>
-      <a href="./about" class="w3-bar-item w3-button">About</a> 
-      <a href="./twoway" class="w3-bar-item w3-button">Solution</a>
-      <a href="./prediction2" class="w3-bar-item w3-button">Forecast</a>
+  <header>
+    <!-- Navbar starts -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="/">
+        <img src="./img/Fly Fighters Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Fly Fighters
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="./">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="./#feature">Features</a>
+          <a class="nav-item nav-link" href="#">About Us</a>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar ends -->
+
+  </header>
+
+  <div style="height: 100px; width: 100%;"></div>
+
+  <main>
+    <!--content1 two solutions-->
+    
+    <div class="container">
+    <div class="card-deck">
+      <div class="card">
+        <img class="card-img-top" src="./img/jed-owen-1JgUGDdcWnM-unsplash.jpg" alt="Card image cap">
+        <div class="card-body" style="background-color: #BEBBBB;">
+          <h5 class="card-title">Forecast</h5>
+          <p class="card-text">Discover Medfly attack in your area.</p>
+          <div style="height: 30px; text-align: center">
+            <a href="./prediction2" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="./img/jesse-orrico-IdjxBF_StBk-unsplash-2.jpg" alt="Card image cap">
+        <div class="card-body" style="background-color: #BEBBBB;">
+          <h5 class="card-title">Farm Protection</h5>
+          <p class="card-text">Ways to defend your farm from Medfly.</p>
+          <div style="height: 30px; text-align: center">
+            <a href="./farmprotect" class="btn">Explore</a>
+            </div>
+        </div>
+      </div>
+      <!-- buffer  -->
+      <div style="height: 54px; width:max-content;"></div>
+      <div id="qwert" style="height: 200px; width: auto; text-align: center"></div>
+
     </div>
   </div>
-</div>
-
-<div style="height: 200px; width: 100%;"></div>
 
 
-
-
-
-
-  <!--content1 two solutions-->
-  <!--forcast/map-->
-<div class="w3-row w3-container" style="margin-left: 15%; margin-right: 15%;">
-    <div class="w3-half w3-container" >
-      <img src="./img/twowayforcast.png" style="width:100%;height:150%">
-      <div><a href="./prediction2">
-        <img src="./img/explorepink.png" style="width:30%;">
-      </div>
-    </div>
-    
-      <!--Farm protection-->
-    <div class="w3-half w3-container" >
-        <img src="./img/twowayprotection.png" style="width:100%;height:150%">
-        <div><a href="./farmprotect">
-          <img  src="./img/explorepink.png" style="width:30%;">
+    <!--forcast/map-->
+    <!-- <div class="w3-row w3-container" style="margin-left: 15%; margin-right: 15%;"> -->
+      <!-- <div class="w3-half w3-container">
+        <img src="./img/twowayforcast.png" style="width:100%;height:150%">
+        <div style="height: 30px; text-align: center">
+          <a href="./prediction2" class="btn">Explore</a>
         </div>
+
+      </div> -->
+
+      <!--Farm protection-->
+      <!-- <div class="w3-half w3-container">
+        <img src="./img/twowayprotection.png" style="width:100%;height:150%">
+        <div style="height: 30px; text-align: center">
+        <a href="./farmprotect" class="btn">Explore</a>
+        </div>
+       
+      </div> -->
+    <!-- </div> -->
+
+    <!--buffer-->
+    <!-- <div style="height: 50px; width:max-content;"></div> -->
+
+  </main>
+
+  <!-- Footer starts-->
+
+  <footer class="footer page-footer bg-dark font-small mt-auto">
+    <!-- Copyright -->
+    <div class="footer-copyright text-white text-center py-3">© 2020 Copyright:
+      <a href="http://flyfighter.bike/"> Fly Fighters</a>
     </div>
-</div>
-
-<!--buffer-->
-<div style="height: 50px; width:max-content;"></div>
-
-  
-  
-
-
-<!-- Footer -->
-<footer class="w3-padding-32 w3-black w3-center w3-margin-top">
-    <h5>Follow Us</h5>
-    <div class="w3-xlarge w3-padding-16">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <p>Powered by THE FLY FIGHTERS</p>
+    <!-- Copyright -->
   </footer>
+  <!-- Footer ends-->
 </body>
-  </html>
-  
-  
+
+</html>
