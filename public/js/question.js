@@ -78,7 +78,11 @@ function choose() {
                 for (i = 0; i < data.length; i++) {
                     let measure = data[i]["Preventive Measure"]///error some may have two results
                     let desc = data[i]["Preventive Desc"]
-                    para += "<p>" + measure + "</p>" + "<p>" + desc + "</p>"
+                    let app = data[i]["Preventive Application"]
+                    let explain = data[i]["Preventive Explanation"]
+                    para += "<p>" + measure + "</p>" + "<p>Description</p>" + "<p>" + 
+                    desc + "</p>" + "<p>Application</p>" + "<p>" + app + "</p>" + 
+                    "<p>Explanation</p>"  + "<p>" + explain + "</p>"
                 }
             }
 

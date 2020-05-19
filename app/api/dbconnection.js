@@ -69,7 +69,7 @@ app.get("/get2/:temp", (req, res) => {
     });
 });
 
-//get the mitigation method
+//get the mitigation method if not facing any medfly issue
 app.get("/get3/:farmstage", (req, res) => {
     var farmstage = req.params.farmstage
     

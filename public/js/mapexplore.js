@@ -68,7 +68,9 @@ function getmitiresult() {
                         let measure = data[i]["Control Measure"]///error some may have two results
                         let desc = data[i]["Control Desc"]
                         let app = data[i]["Control Application"]
-                        para += "<p>" + measure + "</p>" + "<p>" + desc + "</p>" + "<p>" + app + "</p>"
+                        let explain = data[i]["Control Explanation"]
+                        para += "<p>" + measure + "</p>" + "<p>DESCRIPTION</p>" + "<p>" + desc + "</p>" + "<p>APPLICATION</p>" 
+                        + "<p>" + app + "</p>" + "<p>EXPLANATION</p>" + "<p>" + explain + "</p>"
                     }
                 }
 
