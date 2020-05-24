@@ -12,25 +12,47 @@ function predict() {
 
     $.ajax({
         url: this.url + riskarea + ",WA,AU&appid=" + "a2d17cb6975c305afcd5bb881ce5f858",
-    
         success:function(data) {
             console.log(data)
             coord = data.city.coord
-            for (i=0; i<data.list.length;i++) {
+            var res_neg = document.getElementById("result-negative")
+            var res_pos = document.getElementById("result-positive")
+            res_pos.innerHTML = ""
+            res_neg.innerHTML = "Here is Medfly forecast for 5 days:\n"
+            for (i=7; i<data.list.length;i=i+8) {
                 var date = data.list[i].dt_txt
-                console.log(riskdate)
-                if(date.substring(0,10) == riskdate){
-                    var temp = data.list[i].main.temp
-                    console.log(temp)
-                    searchInDatabase(temp,coord)
-
-
-                    break
-                }
+                console.log(date)
+                var temp = data.list[i].main.temp
+                calculateTemp(temp, date)
             }
+            
         }
     })
 
+}
+
+function calculateTemp(temp, date) {
+    $.ajax({
+        url: "http://localhost:3000/api/get2/" + (temp - 273.15),
+        success: function(data) {
+            console.log("find data", data)
+            var count = data[0]["count(*)"]
+            var res_pos = document.getElementById("result-positive")
+            if (count == 0) {
+                var str = date.substring(0,10)+ " low" + "<br>"
+                $("#result-negative").show()
+                $("#result-positive").show()
+                res_pos.innerHTML += str
+                console.log(str)
+            } else {
+                var str = date.substring(0,10) + " high" + "<br>"
+                $("#result-negative").show()
+                $("#result-positive").show()
+                res_pos.innerHTML += str
+                console.log(str)
+            }
+        }
+    })
 }
 
 function searchInDatabase(temp, coord) {
@@ -39,8 +61,8 @@ function searchInDatabase(temp, coord) {
         success: function(data) {
             console.log("find data", data)
             var count = data[0]["count(*)"]
-         var res_neg = document.getElementById("result-negative")
-         var res_pos = document.getElementById("result-positive")
+            var res_neg = document.getElementById("result-negative")
+            var res_pos = document.getElementById("result-positive")
             if (count == 0) {
                 res_neg.style.display = "none"
                 res_pos.style.display = "block"

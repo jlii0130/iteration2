@@ -108,6 +108,7 @@
       </nav>
     </div>
     <!-- Nav Bar ends -->
+    
   </header>
   <!-- Header ends-->
 
@@ -128,26 +129,8 @@
 
             <!--map selection-->
             <div id="mapselection" style="height: 100px; width:auto;text-align: center;">
-              <div class="w3-white">Select Date and Location:</div>
-              <div style="height: 20px; width:max-content;"></div>
-              <div>
-                <select id="selforcastdate">
-                  <option value="none" selected disabled hidden>Select the date</option>
-                  <script>
-                    var countDownDate = new Date();
-                    para = '';
-                    for (i = 0; i < 5; i++) {
-                      var mydate = countDownDate.setDate(countDownDate.getDate() + 1);
-                      var formatedDate = formatdate(mydate)
-                      var selection = '<option>' + formatedDate + '</option>'
-                      para += selection
-                    }
-                    para += ''
-                    document.write(para)
-                  </script>
-                </select>
-              </div>
-              <div style="height: 20px; width:max-content;"></div>
+              <div class="w3-white">Select Date and Location:</div>          
+              <div style="height: 30px; width:max-content;"></div>
               <div>
                 <select id="selectionarea">
                   <option value="none" selected disabled hidden>Select the location</option>
@@ -173,8 +156,9 @@
               <div style="height: 0px;"></div>
               <div class="btn btn-outline-default btn-rounded waves-effect">
                 <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;"  onclick="predict()">Submit</a></div>
-            
-                <p id="result-negative" style="display: none;">There is a very high probability of Medfly attack</p>
+                
+                <p id="result-negative" style="display: none;">Here is Medfly forecast for 5 days:</p>
+
                 <p id="result-positive" style="display: none;">There is a very less probability of Medfly attack</p>
                 
               </div>
