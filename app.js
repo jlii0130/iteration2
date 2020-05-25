@@ -62,14 +62,14 @@ app.post('/login',(req,res,next) => {
   }
 });
 
-// app.use(function (req,res,next) {
-//   const url = req.originalUrl;
-//   console.log(sess.email);
-//   if (url !== "/login" && sess.email !== secret.email && sess.pass !== secret.password) {
-//     return res.redirect("/login");
-//   }
-//   next();
-// })
+app.use(function (req,res,next) {
+const url = req.originalUrl;
+console.log(sess.email);
+if (url !== "/login" && sess.email !== secret.email && sess.pass !== secret.password) {
+   return res.redirect("/login");
+}
+next();
+})
 
 // End ==================== Temp Code//
 
