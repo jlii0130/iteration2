@@ -7,13 +7,17 @@ function btn1() {
     $("#mapfruit").show();
 }
 
+function btn2() {
+    $("#curfarming").hide()
+    $("#season").show();
+}
 
 function btn3() {
     if (document.getElementById("mapfruitselect").value == "none") {
         alert("Please select an option.");
     }
     else {
-        $("#curfarming").hide()
+        $("#curfarming").hide();
         $("#mapfruit").hide();
         $("#mapsize").show();
     }
@@ -24,7 +28,7 @@ function btn4() {
         alert("Please select an option.");
     }
     else {
-        $("#curfarming").hide()
+        $("#curfarming").hide();
         $("#mapfruit").hide();
         $("#mapsize").hide();
         $("#mapstage").show();
@@ -32,32 +36,30 @@ function btn4() {
 }
 
 function btn5() {
-    if (document.getElementById("mapstage").value == "none") {
+    if (document.getElementById("proseason").value == "none") {
         alert("Please select an option.");
     }
     else {
-        $("#curfarming").hide()
-        $("#mapfruit").hide();
-        $("#mapsize").hide();
-        $("#mapstage").hide();
-        $("#").show();
+        $("#curfarming").hide();
+        $("#season").hide();
+        $("#fruitgrow").show();
     }
 }
 
-function getmitiresult() {
-    if (document.getElementById("mapstageselect").value == "none") {
+function btn6(){
+    if (document.getElementById("notcurfruit").value == "none") {
         alert("Please select an option.");
     }
     else {
-        $("#curfarming").hide()
-        $("#mapstage").hide();
-        $("#mapresult").show();
+        $("#curfarming").hide();
+        $("#fruitgrow").hide();
+        $("#protectmitigate").show();
 
 
-        var farmstage = $("#mapstage option:selected").text();
+        var notcurfruit = $("#notcurfruit option:selected").text();
 
 
-        console.log(this.url + '/api/get3/' + farmstage)
+        console.log(this.url + '/api/get5/' + notcurfruit)
         //var selectfruit = document.getElementById("selectionfruit");
         //var valfruit = selectfruit.option[selectfruit.selectedIndex].value
 
@@ -66,11 +68,12 @@ function getmitiresult() {
 
         //Precautionary
         $.ajax({
-            url: this.url + '/api/get3/' + farmstage,
+            url: this.url + '/api/get5/' + notcurfruit,
 
             success: function (data) {
                 var para = '';
-                let div = $("#method1")
+                let div = $("#method3")
+                console.log(data)
                 if (data.length == 0) {
                     para = '<p>(Sorry, due to our data limitation, we could not provide any suggestion for your selection)</p>'
                 } else {
@@ -82,15 +85,30 @@ function getmitiresult() {
                         let desc = data[i]["Control Desc"]
                         let app = data[i]["Control Application"]
                         let explain = data[i]["Control Explanation"]
-                        para += "<p>" + measure + "</p>" + "<p>DESCRIPTION</p>" + "<p>" + desc + "</p>" + "<p>APPLICATION</p>" 
-                        + "<p>" + app + "</p>" + "<p>EXPLANATION</p>" + "<p>" + explain + "</p>"
+                        para += "<p>" + measure + "</p>" + "<p>DESCRIPTION</p>" + "<p>" + desc + "</p>" + "<p>APPLICATION</p>" + 
+                        "<p>" + app + "</p>" + "<p>EXPALANATION</p>" + "<p>" + explain + "</p>"
                     }
                 }
 
                 div.empty()
                 div.append(para)
                 console.log(div)
+
             }
         })
+    }
+}
+
+function getmitiresult() {
+    if (document.getElementById("mapstageselect").value == "none") {
+        alert("Please select an option.");
+    }
+    else {
+        $("#curfarming").hide();
+        $("#mapstage").hide();
+        $("#mapresult").show();
+
+
+        
     }
 }
