@@ -14,7 +14,7 @@ function btn1() {
     else {
         $("#selectlocation").hide()
         $("#farmsize").show();
-        $("#selectfruit").hide();
+        $("#fruit").hide();
         $("#result").hide();
     }
 }
@@ -24,7 +24,7 @@ function btn2() {
         alert("Please select an option.");
     }
     else {
-        $("#selectfruit").show();
+        $("#fruit").show();
         $("#selectlocation").hide();
         $("#farmsize").hide();
         $("#result").hide();
@@ -39,7 +39,7 @@ function btn3() {
         console.log("")
         $("#selectlocation").hide();
         $("#farmsize").hide();
-        $("#selectfruit").hide();
+        $("#fruit").hide();
         choose();
         $("#result").show();
     }
@@ -74,15 +74,15 @@ function btn3() {
                 } else {
                     //console.log(data)
                     //console.log(data[0]["Preventive Measure"]);
-                    para = '<p>Hello，here is our suggestion:</p>'
+                    para = '<p>Please find below the recommended Precautionary Methods:</p>'
                     for (i = 0; i < data.length; i++) {
                         let measure = data[i]["Preventive Measure"]///error some may have two results
                         let desc = data[i]["Preventive Desc"]
                         let app = data[i]["Preventive Application"]
                         let explain = data[i]["Preventive Explanation"]
-                        para += "<p>" + measure + "</p>" + "<p>Description</p>" + "<p>" +
-                            desc + "</p>" + "<p>Application</p>" + "<p>" + app + "</p>" +
-                            "<p>Explanation</p>" + "<p>" + explain + "</p>"
+                        para += "<p>Name:</p>" + "<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" +
+                            desc + "</p>" + "<p>Application:</p>" + "<p>" + app + "</p>" +
+                            "<p>Explanation:</p>" + "<p>" + explain + "</p>"
                     }
                 }
 
