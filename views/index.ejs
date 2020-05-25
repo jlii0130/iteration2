@@ -17,17 +17,21 @@
   <!-- Header starts -->
   <header id="header" class="header-section">
     <!-- Nav Bar begins -->
-    <div class="container">
-      <nav class="navbar ">
+    <div class="container-fluid">
+      <nav class="navbar sticky-top navbar-expand-md navbar-light bg-white">
         <a href="./" class="navbar-brand">
           <h3><img class="logo-dark" src="./img/Fly Fighters Logo.png" width="60" height="60" alt="Fly Fighters">
             Fly Fighters</h3>
         </a>
-        <div class="d-flex menu-wrap">
-          <div id="mainmenu" class="mainmenu">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <div class="d-flex menu-wrap"> -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div id="mainmenu" class="mainmenu ml-auto">
             <ul class="nav">
-              <li><a data-scroll="" class="nav-link active" href="./">Home<span class="sr-only">(current)</span></a>
-              </li>
+              <li><a href="#">Home</a></li>
               <li><a href="#feature">Services</a></li>
               <li><a href="#aboutus">About Us</a></li>
             </ul>
@@ -37,8 +41,8 @@
           </div>
         </div>
       </nav>
+      <!-- Nav Bar ends -->
     </div>
-    <!-- Nav Bar ends -->
   </header>
   <!-- Header ends-->
 
@@ -49,7 +53,7 @@
         <!-- <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%; height: 100%;">
       <source src="./img/homepage_video.mp4" type="video/mp4">
     </video> -->
-        <img src="./img/only imge-01.png" class="img-fluid " alt="Responsive image">
+        <img src="./img/only imge-01.png" class="img-fluid" alt="Responsive image">
       </div>
       <!-- <div class="overlay"></div> -->
       <div class="header-content text-md-center">
@@ -96,7 +100,7 @@
             <div class="gallery-item">
               <img src="./img/eddie-kopp-5FsE88h3Wak-unsplash.jpg" alt="img">
               <div class="gallery-content">
-                <h3><a class="img-popup vbox-item" href="/img/eddie-kopp-5FsE88h3Wak-unsplash.jpg">Unique<span>Get
+                <h3><a class="img-popup vbox-item">Unique<span>Get
                       unique
                       solutions to your problems.</span></a></h3>
 
@@ -107,8 +111,7 @@
             <div class="gallery-item">
               <img src="./img/sara-the-freak-A4UojtraSrw-unsplash.jpg" alt="img">
               <div class="gallery-content">
-                <h3><a class="img-popup vbox-item"
-                    href="../img/sara-the-freak-A4UojtraSrw-unsplash.jpg">Accurate<span>Get accurate prediction to be a
+                <h3><a class="img-popup vbox-item">Accurate<span>Get accurate prediction to be a
                       step ahead.</span></a></h3>
               </div>
             </div>
@@ -135,9 +138,8 @@
             <div class="promo-item text-center">
               <i class="food-icon food-iconolives"></i>
               <img src="./img/jed-owen-1JgUGDdcWnM-unsplash.jpg" alt="img">
-              <h3>New as a Farmer</h3>
+              <h3>Amateur Farmer</h3>
               <p>There are lot of things to catch up, let Medfly be your least concern.</p>
-              <p style="height: 10px;"></p>
               <a class="btn" href="./prediction" role="button" style="font-size: 2vw;">Explore</a>
             </div>
           </div>
@@ -147,7 +149,7 @@
               <img src="./img/jesse-orrico-IdjxBF_StBk-unsplash-2.jpg" alt="img">
               <h3>Seasoned Farmer</h3>
               <p>Medfly spreads like a grass fire, even the seasoned farmer can be caught out.</p>
-             
+
               <a class="btn" href="./twoway" role="button" style="font-size: 2vw;">Explore</a>
             </div>
           </div>
