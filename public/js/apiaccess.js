@@ -33,7 +33,7 @@ function predict() {
 
 function calculateTemp(temp, date) {
     $.ajax({
-        url: "http://localhost:3000/api/get2/" + (temp - 273.15),
+        url: "http://node-express-env.eba-gmkgnjkq.ap-southeast-2.elasticbeanstalk.com/api/get2/" + (temp - 273.15),
         success: function(data) {
             console.log("find data", data)
             var count = data[0]["count(*)"]
