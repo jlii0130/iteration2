@@ -86,6 +86,7 @@
                 <!--<div style="height: 100px; width:auto;text-align: center">-->
                 <div class="w3-white">
                   <!--buffer div-->
+
                   <h3>Are you currently farming?</h3>
                   <p>Choose from the below options.</p>
                   <div style="height: 54px; width:max-content;"></div>
@@ -154,8 +155,6 @@
 
             <!--question2 what farm size-->
             <div class="w3-row" id="mapsize" style="display: none">
-
-
               <div class="w3-full w3-container">
                 <div style="height: 100px; width:auto;text-align: center">
                   <div class="w3-white">
@@ -193,8 +192,6 @@
 
             <!--question3 what stage of farming-->
             <div class="w3-row" id="mapstage" style="display: none">
-
-
               <div class="w3-full w3-container">
                 <div style="height: 100px; width:auto;text-align: center">
                   <div class="w3-white">
@@ -238,6 +235,37 @@
                 <p class="w3-justify"></p>
               </div>
             </div>
+
+            <!--are you wish to farm "no" question1 the season-->
+            <div class="w3-row" id="season" style="display: none">
+              <div class="w3-full w3-container">
+                <div style="height: 100px; width:auto;text-align: center">
+                  <div class="w3-white">
+                    <h3>Which season do you plan to farm?</h3>
+                    <p>Choose from the below options. (1/2)</p>
+
+                    <select id="proseason">
+                      <option value="none" selected disabled hidden>Select from the options</option>
+                      <option value="Broome">Spring</option>
+                      <option value="Bunbury">Summer</option>
+                      <option value="Carnarvon">Autumn</option>
+                      <option value="Donnybrook">Winter</option>
+                    </select>
+                  </div>
+                  <!--buffer-->
+                  <div style="height: 54px; width:max-content;"></div>
+                  <!--botton-->
+                  <div style="height: 30px; text-align: center">
+                    <div style="height: 0px;"></div>
+                    <div class="btn btn-outline-default btn-rounded waves-effect">
+                      <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;" onclick="btn5()">Next</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
 
           </div>
         </div>

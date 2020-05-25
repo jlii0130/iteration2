@@ -31,6 +31,19 @@ function btn4() {
     }
 }
 
+function btn5() {
+    if (document.getElementById("mapstage").value == "none") {
+        alert("Please select an option.");
+    }
+    else {
+        $("#curfarming").hide()
+        $("#mapfruit").hide();
+        $("#mapsize").hide();
+        $("#mapstage").hide();
+        $("#").show();
+    }
+}
+
 function getmitiresult() {
     if (document.getElementById("mapstageselect").value == "none") {
         alert("Please select an option.");
