@@ -218,12 +218,12 @@ function btn9() {
                 } else {
                     //console.log(data)
                     //console.log(data[0]["Preventive Measure"]);
-                    para = '<p>Please find below the recommended Precautionary Methods:</p>'
+                    para = '<p>Please find below the recommended Mitigation Methods:</p>'
                     for (i = 0; i < data.length; i++) {
-                        let measure = data[i]["Preventive Measure"]///error some may have two results
-                        let desc = data[i]["Preventive Desc"]
-                        let app = data[i]["Preventive Application"]
-                        let explain = data[i]["Preventive Explanation"]
+                        let measure = data[i]["Control Measure"]///error some may have two results
+                        let desc = data[i]["Control Desc"]
+                        let app = data[i]["Control Application"]
+                        let explain = data[i]["Control Explanation"]
                         para += "<p>Name:</p>"+"<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" + 
                         "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
                     }

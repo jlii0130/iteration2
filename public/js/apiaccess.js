@@ -1,6 +1,8 @@
 
 //var url = "http://api.openweathermap.org/data/2.5/forecast?q=Perth,WA,AU&appid="
 var url = "http://api.openweathermap.org/data/2.5/forecast?q=" 
+var local = "http://localhost:3000/"
+var server = "http://node-express-env.eba-gmkgnjkq.ap-southeast-2.elasticbeanstalk.com/"
 
 //get the location and draw the circle on the map
 function predict() {
@@ -19,35 +21,80 @@ function predict() {
             var res_pos = document.getElementById("result-positive")
             res_pos.innerHTML = ""
             res_neg.innerHTML = "Here is Medfly forecast for 5 days:\n"
-            for (i=7; i<data.list.length;i=i+8) {
-                var date = data.list[i].dt_txt
-                console.log(date)
-                var temp = data.list[i].main.temp
+
+            
+            setTimeout(function() {
+                console.log("processing 1")
+                var date = data.list[7].dt_txt
+                var temp = data.list[7].main.temp
+                $("#result-negative").show()
+                $("#result-positive").show()
                 calculateTemp(temp, date)
-            }
+
+            },0)
+            setTimeout(function() {
+                console.log("processing 2")
+                var date = data.list[15].dt_txt
+                var temp = data.list[15].main.temp
+                $("#result-negative").show()
+                $("#result-positive").show()
+                calculateTemp(temp, date)
+            },1000)
+            setTimeout(function() {
+                console.log("processing 3")
+                var date = data.list[23].dt_txt
+                var temp = data.list[23].main.temp
+                $("#result-negative").show()
+                $("#result-positive").show()
+                calculateTemp(temp, date)
+            },2000)
+            setTimeout(function() {
+                console.log("processing 4")
+                var date = data.list[31].dt_txt
+                var temp = data.list[31].main.temp
+                $("#result-negative").show()
+                $("#result-positive").show()
+                calculateTemp(temp, date)
+            },3000)
+            setTimeout(function() {
+                console.log("processing 5")
+                var date = data.list[39].dt_txt
+                var temp = data.list[39].main.temp
+                $("#result-negative").show()
+                $("#result-positive").show()
+                calculateTemp(temp, date)
+            },4000)
+            
+            // for (i=7; i<data.list.length;i=i+8) {
+            //     var date = data.list[i].dt_txt
+            //     var temp = data.list[i].main.temp
+            //     $("#result-negative").show()
+            //     $("#result-positive").show()
+            //     if (i==7) {
+            //         calculateTemp(temp, date)
+            //     } else {
+            //         setTimeout(calculateTemp(temp,date),1000)
+            //     }
+            // }
+            
             
         }
     })
-
 }
 
 function calculateTemp(temp, date) {
     $.ajax({
-        url: "http://node-express-env.eba-gmkgnjkq.ap-southeast-2.elasticbeanstalk.com/api/get2/" + (temp - 273.15),
+        url: this.server + "api/get2/" + (temp - 273.15),
         success: function(data) {
-            console.log("find data", data)
             var count = data[0]["count(*)"]
             var res_pos = document.getElementById("result-positive")
+            console.log(temp, date)
             if (count == 0) {
                 var str = date.substring(0,10)+ " low" + "<br>"
-                $("#result-negative").show()
-                $("#result-positive").show()
                 res_pos.innerHTML += str
                 console.log(str)
             } else {
                 var str = date.substring(0,10) + " high" + "<br>"
-                $("#result-negative").show()
-                $("#result-positive").show()
                 res_pos.innerHTML += str
                 console.log(str)
             }

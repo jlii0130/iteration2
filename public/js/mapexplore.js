@@ -1,6 +1,6 @@
-var url = 'http://node-express-env.eba-gmkgnjkq.ap-southeast-2.elasticbeanstalk.com'
+//var url = 'http://node-express-env.eba-gmkgnjkq.ap-southeast-2.elasticbeanstalk.com'
 //local host
-//var url = "http://localhost:3000"
+var url = "http://localhost:3000"
 
 function btn1() {
     $("#curfarming").hide()
@@ -17,7 +17,7 @@ function btn3() {
         alert("Please select an option.");
     }
     else {
-        $("#curfarming").hide();
+        //$("#curfarming").hide();
         $("#mapfruit").hide();
         $("#mapsize").show();
     }
@@ -111,7 +111,7 @@ function btn6(){
         var notcurfruit = $("#notcurfruit option:selected").text();
 
 
-        console.log(this.url + '/api/get5/' + notcurfruit)
+        console.log(this.url + '/api/get4/' + notcurfruit)
         //var selectfruit = document.getElementById("selectionfruit");
         //var valfruit = selectfruit.option[selectfruit.selectedIndex].value
 
@@ -120,7 +120,7 @@ function btn6(){
 
         //Precautionary
         $.ajax({
-            url: this.url + '/api/get5/' + notcurfruit,
+            url: this.url + '/api/get4/' + notcurfruit,
 
             success: function (data) {
                 var para = '';
