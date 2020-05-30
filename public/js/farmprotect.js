@@ -68,6 +68,7 @@ function btn6() {
     $("#farmsize").hide();
     $("#stage").hide();
     $("#faceissue").hide();
+    $("#Qs").hide();
     $("#mitresult").show();
 
     var prostage = $("#prostage option:selected").text();
@@ -92,14 +93,26 @@ function btn6() {
             } else {
                 //console.log(data)
                 //console.log(data[0]["Preventive Measure"]);
-                para = '<p>Please find below the recommended Mitigation Methods:</p>'
+                // para = '<p>Please find below the recommended Mitigation Methods:</p>'
+                para += '<tr>'
+                para += '<th>Name</th>'
+                para += '<th>Description</th>'
+                para += '<th>Application</th>'
+                para += '<th>Explanation</th>'
+                para += '</tr>'
                 for (i = 0; i < data.length; i++) {
                     let measure = data[i]["Control Measure"]///error some may have two results
                     let desc = data[i]["Control Desc"]
                     let app = data[i]["Control Application"]
                     let explain = data[i]["Control Explanation"]
-                    para += "<p>Name:</p>"+"<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" + 
-                    "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                    // para += "<p>Name:</p>"+"<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" + 
+                    // "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                    para += '<tr>' +
+                    '<td style="border-spacing: 50px; text-align:justify">' + measure + '</td>'+
+                    '<td style="border-spacing: 10px;text-align:justify">' + desc + '</td>' +
+                    '<td style="border-spacing: 10px;text-align:justify">' + app + '</td>' +
+                    '<td style="border-spacing: 10px;text-align:justify">' + explain + '</td>' +
+                    '</tr>'
                 }
             }
 
@@ -119,6 +132,7 @@ function btn7() {
     $("#stage").hide();
     $("#faceissue").hide();
     $("#mitresult").hide();
+    $("#Qs").hide();
     $("#precauresult").show();
 
 
@@ -139,21 +153,35 @@ function btn7() {
         success: function (data) {
             var para = '';
             let div = $("#method2")
-            console.log(data)
+            // console.log(data)
             if (data.length == 0) {
                 para = '<p>(Sorry, due to our data limitation, we could not provide any suggestion for your selection)</p>'
             } else {
                 //console.log(data)
                 //console.log(data[0]["Preventive Measure"]);
-                para = '<p>Please find below the recommended Precautionary Methods:</p>'
+                // para = '<p>Please find below the recommended Precautionary Methods:</p>'
+                // para += '<table class="table-striped table-light">'
+                para += '<tr>'
+                para += '<th>Name</th>'
+                para += '<th>Description</th>'
+                para += '<th>Application</th>'
+                para += '<th>Explanation</th>'
+                para += '</tr>'
                 for (i = 0; i < data.length; i++) {
                     let measure = data[i]["Preventive Measure"]///error some may have two results
                     let desc = data[i]["Preventive Desc"]
                     let app = data[i]["Preventive Application"]
                     let explain = data[i]["Preventive Explanation"]
-                    para += "<p>Name:</p>"+"<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" + 
-                    "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                    // para += "<p>Name:</p>"+"<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" + 
+                    // "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                    para += '<tr>' +
+                            '<td style="border-spacing: 50px; text-align:justify">' + measure + '</td>'+
+                            '<td style="border-spacing: 10px;text-align:justify">' + desc + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + app + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + explain + '</td>' +
+                            '</tr>'
                 }
+                   // para += '</table>'
             }
 
             div.empty()
@@ -191,6 +219,7 @@ function btn9() {
         $("#precauresult").hide();
         $("#season").hide();
         $("#fruitgrow").hide();
+        $("#Qs").hide();
         $("#protectmitigate").show();
 
 
@@ -212,13 +241,19 @@ function btn9() {
             success: function (data) {
                 var para = '';
                 let div = $("#method3")
-                console.log(data)
+                // console.log(data)
                 if (data.length == 0) {
                     para = '<p>(Sorry, due to our data limitation, we could not provide any suggestion for your selection)</p>'
                 } else {
                     //console.log(data)
                     //console.log(data[0]["Preventive Measure"]);
-                    para = '<p>Please find below the recommended Mitigation Methods:</p>'
+                    // para = '<p>Please find below the recommended Mitigation Methods:</p>'
+                    para += '<tr>'
+                    para += '<th>Name</th>'
+                    para += '<th>Description</th>'
+                    para += '<th>Application</th>'
+                    para += '<th>Explanation</th>'
+                    para += '</tr>'
                     for (i = 0; i < data.length; i++) {
                         let measure = data[i]["Control Measure"]///error some may have two results
                         let desc = data[i]["Control Desc"]
@@ -226,6 +261,12 @@ function btn9() {
                         let explain = data[i]["Control Explanation"]
                         para += "<p>Name:</p>"+"<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" + 
                         "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                        para += '<tr>' +
+                        '<td style="border-spacing: 50px; text-align:justify">' + measure + '</td>'+
+                        '<td style="border-spacing: 10px;text-align:justify">' + desc + '</td>' +
+                        '<td style="border-spacing: 10px;text-align:justify">' + app + '</td>' +
+                        '<td style="border-spacing: 10px;text-align:justify">' + explain + '</td>' +
+                        '</tr>'
                     }
                 }
 

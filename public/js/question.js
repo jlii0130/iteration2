@@ -40,6 +40,7 @@ function btn3() {
         $("#selectlocation").hide();
         $("#farmsize").hide();
         $("#fruit").hide();
+        $("#Qs").hide();
         choose();
         $("#result").show();
     }
@@ -74,9 +75,14 @@ function btn3() {
                 } else {
                     //console.log(data)
                     //console.log(data[0]["Preventive Measure"]);
-                    para = '<p>Please find below the recommended Precautionary Methods:</p>'
-                    para = '<table>'
-                    para = "<tr><th>Name</th><th>Description</th><th>Application</th><th>Explanation</th></tr>"
+                    // para = '<p>Please find below the recommended Precautionary Methods:</p>'
+                    // para += '<table class="table-striped table-light">'
+                    para += '<tr>'
+                    para += '<th>Name</th>'
+                    para += '<th>Description</th>'
+                    para += '<th>Application</th>'
+                    para += '<th>Explanation</th>'
+                    para += '</tr>'
                     for (i = 0; i < data.length; i++) {
                         let measure = data[i]["Preventive Measure"]///error some may have two results
                         let desc = data[i]["Preventive Desc"]
@@ -85,10 +91,16 @@ function btn3() {
                         // para += "<p>Name:</p>" + "<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" +
                         //     desc + "</p>" + "<p>Application:</p>" + "<p>" + app + "</p>" +
                         //     "<p>Explanation:</p>" + "<p>" + explain + "</p>"
-                        para += "<td>" + measure + "</td>" + "<td>" +
-                            desc + "</td>"+ "<td>" + app + "</td>"  + "<td>" + explain + "</td>"
+                        para += '<tr>' +
+                            '<td style="border-spacing: 50px; text-align:justify">' + measure + '</td>'+
+                            '<td style="border-spacing: 10px;text-align:justify">' + desc + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + app + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + explain + '</td>' +
+                            '</tr>'
+                        
                     }
-                    para = '</table>'
+
+                    // para += '</table>'
                 }
 
                 div.empty()

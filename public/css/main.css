@@ -2473,3 +2473,57 @@ blockquote span {
     z-index: 2 !important;
     }
   
+/* *************Result Section************ */
+
+#result, 
+#protectmitigate,
+#precauresult,
+#mitresult,
+#mapresult,
+#protectmitigate
+{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #result td, #result th,
+  #protectmitigate td, #protectmitigate th,
+  #precauresult td, #precauresult th,
+  #mitresult td, #mitresult th,
+  #mapresult td, #mapresult th,
+  #protectmitigate td, #protectmitigate th
+  {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #result tr:nth-child(even), 
+  #protectmitigate tr:nth-child(even),
+  #precauresult tr:nth-child(even),
+  #mitresult tr:nth-child(even),
+  #mapresult tr:nth-child(even),
+  #protectmitigate tr:nth-child(even)
+  {background-color: #f2f2f2;}
+  
+  #result tr:hover, 
+  #protectmitigate tr:hover,
+  #precauresult tr:hover,
+  #mitresult tr:hover,
+  #mapresult tr:hover,
+  #protectmitigate tr:hover
+  {background-color: #ddd;}
+  
+  #result th, 
+  #protectmitigate th,
+  #precauresult th,
+  #mitresult th,
+  #mapresult th,
+  #protectmitigate th
+  {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: justify;
+    background-color: #4CAF50;
+    color: white;
+  }

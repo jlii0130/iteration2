@@ -43,9 +43,10 @@ function getmitiresult() {
         $("#curfarming").hide();
         $("#mapfruit").hide();
         $("#mapstage").hide();
-        $("#mapresult").show();   
-        
-        
+        $("#Qs").hide();
+        $("#mapresult").show();
+
+
         var farmstage = $("#mapstage option:selected").text();
 
 
@@ -68,14 +69,25 @@ function getmitiresult() {
                 } else {
                     //console.log(data)
                     //console.log(data[0]["Preventive Measure"]);
-                    para = ''
+                    para += '<tr>'
+                    para += '<th>Name</th>'
+                    para += '<th>Description</th>'
+                    para += '<th>Application</th>'
+                    para += '<th>Explanation</th>'
+                    para += '</tr>'
                     for (i = 0; i < data.length; i++) {
                         let measure = data[i]["Control Measure"]///error some may have two results
                         let desc = data[i]["Control Desc"]
                         let app = data[i]["Control Application"]
                         let explain = data[i]["Control Explanation"]
-                        para += "<p>Name:</p>" + "<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" 
-                        + "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                        // para += "<p>Name:</p>" + "<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" 
+                        // + "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                        para += '<tr>' +
+                            '<td style="border-spacing: 50px; text-align:justify">' + measure + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + desc + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + app + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + explain + '</td>' +
+                            '</tr>'
                     }
                 }
 
@@ -98,13 +110,14 @@ function btn5() {
     }
 }
 
-function btn6(){
+function btn6() {
     if (document.getElementById("notcurfruit").value == "none") {
         alert("Please select an option.");
     }
     else {
         $("#curfarming").hide();
         $("#fruitgrow").hide();
+        $("#Qs").hide();
         $("#protectmitigate").show();
 
 
@@ -131,14 +144,25 @@ function btn6(){
                 } else {
                     //console.log(data)
                     //console.log(data[0]["Preventive Measure"]);
-                    para = ''
+                    para += '<tr>'
+                    para += '<th>Name</th>'
+                    para += '<th>Description</th>'
+                    para += '<th>Application</th>'
+                    para += '<th>Explanation</th>'
+                    para += '</tr>'
                     for (i = 0; i < data.length; i++) {
                         let measure = data[i]["Preventive Measure"]///error some may have two results
                         let desc = data[i]["Preventive Desc"]
                         let app = data[i]["Preventive Application"]
                         let explain = data[i]["Preventive Explanation"]
-                        para += "<p>Name:</p>" + "<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" + 
-                        "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                        //     para += "<p>Name:</p>" + "<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" + desc + "</p>" + "<p>Application:</p>" + 
+                        //     "<p>" + app + "</p>" + "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                        para += '<tr>' +
+                            '<td style="border-spacing: 50px; text-align:justify">' + measure + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + desc + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + app + '</td>' +
+                            '<td style="border-spacing: 10px;text-align:justify">' + explain + '</td>' +
+                            '</tr>'
                     }
                 }
 
