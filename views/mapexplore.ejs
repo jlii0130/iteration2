@@ -67,7 +67,7 @@
   <section class="promo-section padding bg-grey">
     <div class="food-1"></div>
     <div class="food-2"></div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="section-heading mb-40 text-center">
         <!-- <img src="img/title-border.png" alt="img"> -->
         <h2>Recommended Methods</h2>
@@ -138,16 +138,18 @@
                       <option value="Apricot">Apricot</option>
                       <option value="Olive">Olive</option>
                     </select>
+                    <!--botton-->
+                    <div style="height: 30px; text-align: center">
+                      <div style="height: 0px;"></div>
+                      <div class="btn btn-outline-default btn-rounded waves-effect">
+                        <a class="btn" role="btn" style="color: #34ad54;" onclick="btn3()">Next</a>
+                      </div>
+                    </div>
                   </div>
 
                   <!--buffer-->
-                  <div style="height: 54px; width:max-content;"></div>
-                  <!--botton-->
-                  <div style="height: 30px; text-align: center">
-                    <div style="height: 0px;"></div>
-                    <div class="btn btn-outline-default btn-rounded waves-effect">
-                      <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;" onclick="btn3()">Next</a></div>
-                  </div>
+                  <!-- <div style="height: 54px; width:max-content;"></div> -->
+
                 </div>
               </div>
             </div>
@@ -160,7 +162,6 @@
                     <!--buffer div-->
                     <h3>What is your farm size(in acres)?</h3>
                     <p>Choose from the below options. (2/3)</p>
-
                     <select id="mapfarmselect">
                       <option value="none" selected disabled hidden>Select from the options</option>
                       <option value="1">1</option>
@@ -175,16 +176,18 @@
                       <option value="10">10</option>
                       <option value="11">11</option>
                     </select>
+                    <!--botton-->
+                    <div style="text-align: center">
+                      <!-- <div style="height: 0px;"></div> -->
+                      <div class="btn btn-outline-default btn-rounded waves-effect">
+                        <a class="btn" role="btn" style="color: #34ad54;" onclick="btn4()">Next</a>
+                      </div>
+                    </div>
                   </div>
 
                   <!--buffer-->
-                  <div style="height: 54px; width:max-content;"></div>
-                  <!--botton-->
-                  <div style="height: 30px; text-align: center">
-                    <div style="height: 0px;"></div>
-                    <div class="btn btn-outline-default btn-rounded waves-effect">
-                      <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;" onclick="btn4()">Next</a></div>
-                  </div>
+                  <!-- <div style="height: 54px; width:max-content;"></div> -->
+
                 </div>
               </div>
             </div>
@@ -197,7 +200,6 @@
                     <!--buffer div-->
                     <h3>At what stage of farming, are you?</h3>
                     <p>Choose from the below options. (3/3)</p>
-
                     <select id="mapstageselect">
                       <option value="none" selected disabled hidden>Select from the options</option>
                       <option value="Cultivate">Cultivate</option>
@@ -205,19 +207,19 @@
                       <option value="Fertilize">Fertilize</option>
                       <option value="Grow">Grow</option>
                       <option value="Harvest">Harvest</option>
-
                     </select>
+                    <!--botton-->
+                    <div style="text-align: center">
+                      <!-- <div style="height: 0px;"></div> -->
+                      <div class="btn btn-outline-default btn-rounded waves-effect">
+                        <a class="btn" role="btn" style="color: #34ad54;"
+                          onclick="getmitiresult()">Submit</a></div>
+                    </div>
                   </div>
 
                   <!--buffer-->
                   <div style="height: 54px; width:max-content;"></div>
-                  <!--botton-->
-                  <div style="height: 30px; text-align: center">
-                    <div style="height: 0px;"></div>
-                    <div class="btn btn-outline-default btn-rounded waves-effect">
-                      <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;"
-                        onclick="getmitiresult()">Submit</a></div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -242,7 +244,6 @@
                   <div class="w3-white">
                     <h3>Which season do you plan to farm?</h3>
                     <p>Choose from the below options. (1/2)</p>
-
                     <select id="proseason">
                       <option value="none" selected disabled hidden>Select from the options</option>
                       <option value="Broome">Spring</option>
@@ -250,70 +251,70 @@
                       <option value="Carnarvon">Autumn</option>
                       <option value="Donnybrook">Winter</option>
                     </select>
-                  </div>
-                  <!--buffer-->
-                  <div style="height: 54px; width:max-content;"></div>
-                  <!--botton-->
-                  <div style="height: 30px; text-align: center">
-                    <div style="height: 0px;"></div>
-                    <div class="btn btn-outline-default btn-rounded waves-effect">
-                      <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;" onclick="btn5()">Next</a>
+                    <!--botton-->
+                    <div style="text-align: center">
+                      <!-- <div style="height: 0px;"></div> -->
+                      <div class="btn btn-outline-default btn-rounded waves-effect">
+                        <a class="btn" role="btn" style="color: #34ad54;" onclick="btn5()">Next</a>
+                      </div>
                     </div>
                   </div>
+                  <!--buffer-->
+                  <!-- <div style="height: 54px; width:max-content;"></div> -->
+
                 </div>
               </div>
             </div>
 
-                <!--are you wish to farm "no" question1 the fruit-->
-              <div class="w3-row" id="fruitgrow" style="display: none">
+            <!--are you wish to farm "no" question1 the fruit-->
+            <div class="w3-row" id="fruitgrow" style="display: none">
 
-                <div class="w3-full w3-container">
-                  <div style="height: 100px; width:auto;text-align: center">
-                    <div class="w3-white">
-                      <h3>Which fruit do you plan to grow?</h3>
-                      <p>Choose from the below options. (2/2)</p>
-
-                      <select id="notcurfruit">
-                        <option value="none" selected disabled hidden>Select from the options</option>
-                        <option value="Grape">Grape</option>
-                        <option value="Apple">Apple</option>
-                        <option value="Peach">Peach</option>
-                        <option value="Melon">Melon</option>
-                        <option value="Orange">Orange</option>
-                        <option value="Pear">Pear</option>
-                        <option value="Tomato">Tomato</option>
-                        <option value="Banana">Banana</option>
-                        <option value="Mango">Mango</option>
-                        <option value="Apricot">Apricot</option>
-                        <option value="Olive">Olive</option>
-                      </select>
-                    </div>
-                    <!--buffer-->
-                    <div style="height: 54px; width:max-content;"></div>
+              <div class="w3-full w3-container">
+                <div style="height: 100px; width:auto;text-align: center">
+                  <div class="w3-white">
+                    <h3>Which fruit do you plan to grow?</h3>
+                    <p>Choose from the below options. (2/2)</p>
+                    <select id="notcurfruit">
+                      <option value="none" selected disabled hidden>Select from the options</option>
+                      <option value="Grape">Grape</option>
+                      <option value="Apple">Apple</option>
+                      <option value="Peach">Peach</option>
+                      <option value="Melon">Melon</option>
+                      <option value="Orange">Orange</option>
+                      <option value="Pear">Pear</option>
+                      <option value="Tomato">Tomato</option>
+                      <option value="Banana">Banana</option>
+                      <option value="Mango">Mango</option>
+                      <option value="Apricot">Apricot</option>
+                      <option value="Olive">Olive</option>
+                    </select>
                     <!--botton-->
-                    <div style="height: 30px; text-align: center">
-                      <div style="height: 0px;"></div>
+                    <div style="text-align: center">
+                      <!-- <div style="height: 0px;"></div> -->
                       <div class="btn btn-outline-default btn-rounded waves-effect">
-                        <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;" 
-                          onclick="btn6()">Submit</a>
+                        <a class="btn" role="btn" style="color: #34ad54;" onclick="btn6()">Submit</a>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              
-              <!--result page precautionary-->
-              <div id="protectmitigate" class="w3-container w3-content w3-center w3-padding-64"
-                style="max-width:90%;display: none">
-                <div>
-                  <h2 class="w3-wide">Recommended Precautionary Methods</h2>
                   <!--buffer-->
-                  <div style="height: 0px; width:max-content;"></div>
-                </div>
-                <div id="method3" style="background-color: #EDE7E5; width: 100%; height: 100%;">
-                  <p class="w3-justify"></p>
+                  <!-- <div style="height: 54px; width:max-content;"></div> -->
+
                 </div>
               </div>
+            </div>
+
+            <!--result page precautionary-->
+            <div id="protectmitigate" class="w3-container w3-content w3-center w3-padding-64"
+              style="max-width:90%;display: none">
+              <div>
+                <h2 class="w3-wide">Recommended Precautionary Methods</h2>
+                <!--buffer-->
+                <!-- <div style="height: 0px; width:max-content;"></div> -->
+              </div>
+              <div id="method3" style="background-color: #EDE7E5; width: 100%; height: 100%;">
+                <p class="w3-justify"></p>
+              </div>
+            </div>
 
           </div>
         </div>
