@@ -75,15 +75,20 @@ function btn3() {
                     //console.log(data)
                     //console.log(data[0]["Preventive Measure"]);
                     para = '<p>Please find below the recommended Precautionary Methods:</p>'
+                    para = '<table>'
+                    para = "<tr><th>Name</th><th>Description</th><th>Application</th><th>Explanation</th></tr>"
                     for (i = 0; i < data.length; i++) {
                         let measure = data[i]["Preventive Measure"]///error some may have two results
                         let desc = data[i]["Preventive Desc"]
                         let app = data[i]["Preventive Application"]
                         let explain = data[i]["Preventive Explanation"]
-                        para += "<p>Name:</p>" + "<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" +
-                            desc + "</p>" + "<p>Application:</p>" + "<p>" + app + "</p>" +
-                            "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                        // para += "<p>Name:</p>" + "<p>" + measure + "</p>" + "<p>Description:</p>" + "<p>" +
+                        //     desc + "</p>" + "<p>Application:</p>" + "<p>" + app + "</p>" +
+                        //     "<p>Explanation:</p>" + "<p>" + explain + "</p>"
+                        para += "<td>" + measure + "</td>" + "<td>" +
+                            desc + "</td>"+ "<td>" + app + "</td>"  + "<td>" + explain + "</td>"
                     }
+                    para = '</table>'
                 }
 
                 div.empty()
