@@ -88,7 +88,6 @@
         <div class="col-md-6 col-sm-6 xs-padding">
           <div class="promo-item text-center">
             <i class="food-icon food-iconolives"></i>
-
             <!--map selection-->
             <div id="mapselection" style="height: 100px; width:auto;text-align: center;">
               <div class="w3-white">Select Location:</div>
@@ -110,19 +109,24 @@
                 </select>
               </div>
             </div>
-
             <!--buffer-->
             <!-- <div style="height: 0px; width:max-content;"></div> -->
             <!--botton-->
-            <div style="height: 30px; text-align: center">
-              <div style="height: 0px;"></div>
+            <div style="text-align: center">
+              <!-- <div style="height: 0px;"></div> -->
               <div class="btn btn-outline-default btn-rounded waves-effect">
-                <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;" onclick="predict()">Submit</a></div>
-
-              <p id="result-negative" style="display: none;">Here is Medfly forecast for 5 days:</p>
-
-              <p id="result-positive" style="display: none;">There is a very less probability of Medfly attack</p>
-
+                <a class="btn" role="btn" style="color: #34ad54;" onclick="predict()">Submit</a></div>
+              <p id="result-negative" style="display: none;"></p>
+             
+              <p id="result-positive" style="display: none;">
+                <tr>
+                  <th>Date</th>
+                  <th>Probability</th>
+                </tr>
+                <tr>
+                  <td></td>
+                </tr>
+              </p>
             </div>
             <div>
             </div>
@@ -133,10 +137,11 @@
         <div class="col-md-6 col-sm-6 xs-padding">
           <div class="promo-item text-center">
             <i class="food-icon food-iconolives"></i>
-            <div class="w3-white">If you found your location has a MedFly issue in the coming days, then click Explore to find ways to protect your farm.</div>
-            <div style="height: 30px; text-align: center">
+            <div class="w3-white">If you found your location has a MedFly issue in the coming days, then click Explore
+              to find ways to protect your farm.</div>
+            <div style="text-align: center">
               <div class="btn btn-outline-default btn-rounded waves-effect">
-                <a class="btn" role="btn" style="color: #34ad54; font-size: 2vw;" href="./mapexplore">Explore</a>
+                <a class="btn" role="btn" style="color: #34ad54; " href="./mapexplore">Explore</a>
               </div>
             </div>
             <!-- <script>
